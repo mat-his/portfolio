@@ -1,0 +1,158 @@
+.layout-hamburger {
+  position: relative;
+  top: 100%;
+  width: 100%;
+  font-family: 'AudiFowide', cursive;
+  background-color: #121212;
+}
+
+.layout-tabs {
+  margin-top: 2.5em;
+  padding-left: 0.6em;
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: 100%;
+  font-family: 'Audiowide', cursive;
+  background-color: #121212;
+}
+.layout-fields {
+  position: absolute;
+    top: 100%;
+  display: inline;
+  text-align: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+main {
+  position: absolute;
+    top: 100%;
+    align-items: center;
+    background-color: #121212;
+}
+
+/*.layout-tabs {
+display: inline;
+width: 100%;
+height: 600px
+font-family: 'Audiowide', cursive;
+background-color: #121212;
+align-items: center;
+}
+.layout-fields {
+text-align: center;
+margin-right: 1%;
+flex: 1;
+background-color: #121212;
+}*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: visible;
+  color: aliceblue;
+  background-color: #121212;
+  background-image: url("../images/IMG_20210105_154446.jpg");
+  background-attachment: fixed;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+button.go {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 75%;
+  font-family: 'Audiowide', cursive;
+  border: transparent;
+  /* Border thickness, line style, and color */
+  border-radius: 5px;
+  /* Adds curve to border corners */
+  text-transform: uppercase;
+  /* Make letters uppercase */
+}
+
+.background {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  background-image: url("../images/IMG_20210105_154446.jpg");
+  background-color: #121212;
+}
+
+.background_image {
+  /*background: url(images/IMG_20210105_154446.jpg) no-repeat 50% fixed / cover;*/
+  width: 100%;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("images/IMG_20210105_154446.jpg");
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.tab {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  /* Make letters uppercase */
+}
+
+.tab p {
+  color: aliceblue;
+}
+.tab.active {
+  color: brown;
+}
+
+.tab a {
+  text-decoration: none;
+}
+
+
+.tabs {
+  /* Text color */
+  background-color: transparent;
+  /* Remove background color */
+  padding: 5%;
+}
+
+.desc {
+  position: relative;
+  top: 85%;
+  /* Text color */
+  background-color: transparent;
+  /* Remove background color */
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.field {
+  margin: 5%;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  padding-top: 75%;
+  /*height: 80vh;*/
+  width: 90%;
+}

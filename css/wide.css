@@ -1,0 +1,259 @@
+.layout-hamburger {
+  visibility: collapse;
+}
+
+.layout-tabs {
+  position: fixed;
+      display: flex;
+      width: 100%;
+      text-align: center;
+      font-family: 'Audiowide', cursive;
+      background-color: #121212;
+  }
+
+#layout-fields {
+    display: flex;
+    margin: 5%;
+    width: 90%;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    background-color: #121212;
+}
+
+.background {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    background-image: url("../images/IMG_20210105_154446.jpg");
+    background-color: #121212;
+}
+
+.background_image {
+    /*background: url(images/IMG_20210105_154446.jpg) no-repeat 50% fixed / cover;*/
+    width: 100%;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("images/IMG_20210105_154446.jpg");
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.tab {
+  text-transform: uppercase;
+}
+
+.tab p {
+  color: #E1E1E1;
+}
+.tab.active {
+    color: brown;
+}
+
+.tab a {
+  text-decoration: none;
+}
+
+
+
+.tabs {
+    /* Text color */
+    background-color: transparent;
+    /* Remove background color */
+    padding: 5%;
+}
+
+.field {
+    flex: 1;
+    margin: 2%;
+    display: inline;
+    border-radius: 5px;
+    padding-top: 41%;
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 5px;
+}
+
+.field:hover {
+  box-shadow: 0 8px 16px 0 rgba(166, 42, 42, 0.5), /*rgba(225, 225, 225, 0.5)*/
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.desc {
+    position: relative;
+    top: 85%;
+    /* Text color */
+    background-color: transparent;
+    /* Remove background color */
+}
+
+.bio {
+  /*margin: 2%;*/
+  background-color: #E1E1E1;
+  padding: 0.6em;
+  text-align: left;
+  color: black;
+}
+.bio p {
+  font-size: 1.2em;
+}
+
+.bio article {
+    margin-left: 15%;
+    margin-right: 10%;
+    width: 70%;
+}
+
+#profil-image {
+  width: 30%;
+  align-items: flex-end;
+  float: right;
+  margin: 2%;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin-left: 2em;
+}
+
+div.gallery {
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    background-color: #212121;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 5px;
+    /*padding: 3.2em;*/
+    padding: 13%;
+    /*background-image: url('../img/tux.png');
+    background-size: 100% 100%;*/
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.gallery p {
+    font-size: 4em;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: #212121;
+    color: white;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    height: 30%;
+    width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+article.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slider {
+  width: 60%;
+  height: 75%;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: center;
+  overflow: hidden;
+  display: inline;
+}
+.image-container {
+  width: 180%;
+  background-color: pink;
+  height: 850px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+  display: table-row;
+}
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+    width: 100%;
+    height: 100%;
+}
+/*#slide-1:target ~ .image-container {
+  left: 0px;
+}
+#slide-2:target ~ .image-container {
+  left: -100%;
+}
+#slide-3:target ~ .image-container {
+  left: -200%;
+}*/
+
+.buttons {
+  top: -20px;
+  position: relative;
+  text-align: center;
+}
+.buttons div {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background-color: brown;
+}
+
+#dev {
+
+}
+#cinema {
+  margin-top: 15%;
+}
+#vfx {
+  margin-top: 15%;
+}

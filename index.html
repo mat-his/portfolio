@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css" />
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css" />
+  <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css" />
+  <link rel="stylesheet" href="css/common.css" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="js/index.js"></script>
+</head>
+
+<body onload="init()">
+
+  <!--navbar-->
+  <header>
+    <div class="navbar layout-hamburger">
+      <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+      </button>
+    </div>
+    <div class="navbar layout-tabs">
+      <div class="tab" style="flex: 2;">
+        <a href="index.html">
+          <p class="tab active">Lecomte</p>
+        </a>
+      </div>
+      <div class="tab" style="flex: 1;">
+        <a href="#dev">
+          <p class="tab">Dev</p>
+        </a>
+      </div>
+      <div class="tab" style="flex: 1;">
+        <a href="#slide-2">
+          <p class="tab">Cinema</p>
+        </a>
+      </div>
+      <div class="tab" style="flex: 1;">
+        <a href="index.html">
+          <p class="tab">VFX</p>
+        </a>
+      </div>
+      <div class="tab" style="flex: 2;">
+        <a href="index.html">
+          <p class="tab">Contact</p>
+        </a>
+      </div>
+      <!--<section>
+      <button class="mdc-button tab-button">
+      <div class="mdc-button__ripple"></div>
+      <div class="mdc-button__label">Greet</div>
+    </button>
+  </section>-->
+</div>
+</header>
+
+<!--image intro-->
+<article class="intro">
+  <img src="images/IMG_20210105_154446.jpg" alt="robot" style="height: 970px; width: 100%; object-fit: cover;">
+  <button class="go" onclick="scrollToFields()">Let's Start</button>
+</article>
+
+<!--activity field-->
+<main>
+  <section id="layout-fields">
+
+    <div class="field ">
+      <button class="desc ">Dev</button>
+    </div>
+    <div class="field ">
+      <button class="desc ">Cinema</button>
+    </div>
+    <div class="field ">
+      <button class="desc ">VFX</button>
+    </div>
+  </section>
+
+  <section class="bio">
+    <p style="font-style: italic;">Le 20 Février 2021</p>
+    <h1>Biographie</h1>
+
+    <article>
+      <img id="profil-image" src="images/profil.svg" alt="profil image">
+      <p>Mon nom est Lecomte Mathis. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne. <br>Je suis actuellement à l'université, en deuxième année de DUT MMI (Métier du Multimédia et de l'Internet), et j'achève celui-ci par la recherche d'un stage dans les différents domaines que j'ai abordés durant ma formation:<br>
+        cela comprend essentiellement du développement mobile (Android, Flutter) et web (orienté client et serveur), de la gestion de bases de données (MySQL et NoSQL), du Game Design (Unity), de la création audiovisuelle, et enfin du Motion Design.
+      </p>
+
+      <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche.
+        Curieux et polyvalent, j'apprends très vite à partir de ce que j'observe, et je prends plaisir à créer, avec à l'appui mes Hobbies.
+      </p>
+
+        <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature. Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction du <i>Robot Jerry</i> et apporte régulièrement des améliorations à mes logiciels bureaux et mobiles en développement.</p>
+        <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à comprendre ce que j'observe. </p>
+    </article>
+
+    </section>
+
+    <!--DEV-->
+    <section id="dev">
+      <h1>DEV</h1>
+      <article class="projects">
+        <!--onenote for linux-->
+        <div class='responsive'>
+          <a href='' style='text-decoration: none;'>
+            <div class='gallery'>
+              <p>#1</p>
+            </div>
+          </a>
+          <div class='desc'>OneNote 4 Linux</div>
+        </div>
+
+        <!--ma config-->
+        <div class='responsive'>
+          <a href='html/project.html' style='text-decoration: none;'>
+            <div class='gallery'>
+              <p>#1</p>
+            </div>
+          </a>
+          <div class='desc'>Ma Config</div>
+        </div>
+
+        <!--jerry-->
+        <div class='responsive'>
+          <a href='html/project.html' style='text-decoration: none;'>
+            <div class='gallery'>
+              <p>#1</p>
+            </div>
+          </a>
+          <div class='desc'>The Jerry Robot</div>
+        </div>
+      </article>
+    </section>
+
+<section id="cinema">
+  <h1 style="color: brown">Cinema</h1>
+  <img src="images/the_home_story_affiche.png" class="slide" style="object-fit: cover;" />
+  <!--<div class="slider">
+    <span id="slide-1"></span>
+    <span id="slide-2"></span>
+    <span id="slide-3"></span>
+    <div class="image-container">
+      <img src="images/the_home_story_affiche.png" class="slide" style="object-fit: cover;" />
+    </div>
+
+  </div>
+  <div class="buttons">
+    <div id="slide1" onclick="slide1()"></div>
+    <div id="slide2" onclick="slide2()"></div>
+    <div id="slide3" onclick="slide3()"></div>
+  </div>-->
+</section>
+<section id="vfx">
+  <h1 >VFX</h1>
+</section>
+  </main>
+
+
+  <script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("layout-tabs ").style.padding = "30px 10px ";
+      document.getElementById("logo ").style.fontSize = "25px ";
+    } else {
+      document.getElementById("layout-tabs ").style.padding = "80px 10px ";
+      document.getElementById("logo ").style.fontSize = "35px ";
+    }
+  }
+  </script>
+
+  <script>
+  includeHTML();
+  init();
+</script>
+
+</body>
+<footer>
+  <p>Copyright (c) Mathis Lecomte</p>
+  <p>
+    <a href="https://www.legalplace.fr/guides/mentions-legales/">Mentions Légales</a>
+  </p>
+</footer>
+
+</html>
