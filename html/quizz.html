@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Linux Quizz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="../index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="../index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="../index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="../index.html#Contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+    </div>
+</header>
+<menu class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#hebergement">
+            <li>Hébergement</li>
+        </a>
+        <a href="#arborescence">
+            <li>Arborescence</li>
+        </a>
+        <a href="#bdd">
+            <li>Base de Données</li>
+        </a>
+    </ul>
+</menu>
+<section class="project" id="intro">
+    <h1>The Linux Quizz</h1>
+    <img src="../images/tux.png" alt="tux" width="20%">
+    <i>Le 27 Décembre 2020</i>
+    <p>The Linux Quizz est un test de 15 questions portant sur le système d'exploitation Linux et ses nombreuses
+        applications. </p>
+    <p>Le but de ce quizz est avant tout de manipuler une base de données MySQL à partir d'un code PHP, permettant une
+        authentification par mire de login, la gestion d'une session et l'incrémentation du score d'un joueur. Ce quizz
+        permet de donc de :
+    </p>
+    <ul>
+        <li>Créer un compte en ligne (les identifiants sont enregistrés dans la base de données (BDD))</li>
+        <li>Se connecter avec un nom d'utilisateur, une adresse email valide et un mot de passe</li>
+        <li>Jouer au quizz avec des variables de session éphémère.</li>
+        <li>Enregistrement des résultats dans la base de données.</li>
+        <li>Déconnexion</li>
+    </ul>
+    <p>Nous remercions alors qcmquiz.com et quizz.biz pour leurs questions pertinentes portant sur GNU Linux.
+        <br><i>https://www.qcmquiz.com/Database/Quiz-Unix-Linux.php</i>
+        <br><i>https://www.quizz.biz/quizz-8251.html</i>
+    </p>
+
+    <a>
+        <button class="go">Start</button>
+    </a>
+</section>
+<section id="hebergement" class="project parts" style="margin-bottom: 10%">
+    <h2>Hébergement</h2>
+    <p>Pour l'hébergement du quizz en Php, il est nécesssaire de posséder un environnement LAMP, car PHP est un langage orienté serveur. <br> J'ai donc procédé à la crétation d'une machine virtuelle KVM (Linux) puis à l'installation d'un environnement LAMP dessus (Linux Apache MySQL Php). </p>
+    <!--IMAGE-->
+    <br>
+    <p>Pour ce qui este de la publication, j'ai recréé l'environnement LAMP de ma machine virtuelle sur une machine hébergée sur AWS (Amazon Web Service). Après une installation lente, il suffit d'uploader l'ensemble de mes fichiers, puis de récupérer l'adressse IP publique de la machine. </p>
+
+</section>
+<section id="arborescence" class="project parts">
+    <h2>Arborescence</h2>
+    <p>L'arborescence de mes fichiers se présente comme suit :</p>
+    <ul id="racines">
+        <li>/
+            <ul class="fichiers">
+                <li>index.php <i>(... page d’accueil ...)</i></li>
+                <li>jeu/ (... partie du site accessible uniquement par les membres ...)</li>
+                <li>quizz.php (... page de lancement du jeu avec les niveaux ...)</li>
+                <li>quest.php (... page avec une question ...)</li>
+                <li>gagne.php (... page lorsque le joueur a gagné ...)</li>
+                <li>score.php (... page contenant les meilleurs scores ...)</li>
+            </ul>
+        </li>
+        <li>php/
+            <ul>
+                <li>bd.inc.php (... paramétrage de la BD ...)</li>
+                <li>connexion.inc.php (... fichier de connexion à la BD ...)</li>
+                <li>mire.inc.php (... mire de login ...)</li>
+                <li>authorise.inc.php (... l’utilisateur est connecté ...)</li>
+            </ul>
+        </li>
+        <li>css/
+            <ul>
+                <li>quizz.css (... le fichier CSS ...)</li>
+            </ul>
+        </li>
+        <li>img/ ( ... contient l’ensemble des images ...)
+            <ul>
+                <li>tux.png</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="bdd" class="project parts">
+    <h2>Base de Données</h2>
+    <p>La base de données du quizz doit répondre à plusieurs besoins : </p>
+    <ul>
+        <li>Authentifier les utilisateurs</li>
+        <li>Héberger la liste des questions</li>
+        <li>Héberger les différentes réponses, et annoter la bonne</li>
+        <li>Compter le score d'un ou plusieurs joueurs</li>
+    </ul>
+    <p>Pour répondre à ces besions, la BDD se structure ainsi :
+        <br><i>(les * représentent les clés primaires)</i>
+    </p>
+    <table id="bdd-table">
+        <tr>
+            <th>Joueur</th>
+            <th>Questions</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>Login <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+            <td>Identifiant <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+            <td>Identifiant <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+        </tr>
+        <tr>
+            <td>Mot de passe <code>[ VARCHAR 32 ]</code></td>
+            <td>Enoncé (question) <code>[ VARCHAR 256 ]</code></td>
+            <td>Date <code>[ TIME ]</code></td>
+        </tr>
+        <tr>
+            <td>Email<code>[ VARCHAR 64 ]</code></td>
+            <td>Réponse 1 <code>[ VARCHAR 32 ]</code></td>
+            <td>Joueur <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Réponse 2 <code>[ VARCHAR 32 ]</code></td>
+            <td>Score <code>[ INT ]</code></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Réponse 3 <code>[ VARCHAR 32 ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Réponse 4 <code>[ VARCHAR 32 ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>N° bonne réponse <code>[ INT ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Difficulté (1, 2 ou 3) <code>[ INT ]</code></td>
+            <td>-</td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

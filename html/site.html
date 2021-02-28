@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Le site</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="../index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="../index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="../index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="../index.html#Contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+    </div>
+</header>
+<menu class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#hebergement">
+            <li>Feuille de style</li>
+        </a>
+        <a href="#arborescence">
+            <li>Navigation</li>
+        </a>
+        <a href="#bdd">
+            <li>Hébergement</li>
+        </a>
+    </ul>
+</menu>
+<section class="project" id="intro">
+    <h1>Le site web</h1>
+    <img src="../images/web_design.png" alt="tux" style="width: 20%; filter: invert(1)">
+    <i>Le 15 Février 2021</i>
+    <p>Le présent site sur lequel vous naviguez n'hérite d'aucun template (hormis Google fonts/icons). Les animations, la feuille de style et la
+        disposition ont été "faits main".
+        <br>Le but de ce site web est de pouvoir présenter de manière claire qui je suis, ce que je fais et comment je
+        le fais. Le défis pouvait paraître simple mais était complexe.
+        <br> En effet, le tout n'est pas de lister communément ce que l'on est, mais de réfléchir à la manière de le
+        synthétiser et de le mettre en valeur.
+    </p>
+    <p>Ainsi, j'ai décidé de réunir mes compétences en trois sections : </p>
+    <ul>
+        <li>Le développement ("dev" pour les intimes),</li>
+        <li>la VFX (effets spéciaux, motion design),</li>
+        <li>et le game design (conception de modèles 3D, programmation sur Unity).</li>
+    </ul>
+    <p>Dans cet article, nous allons donc voir comment a été pensée l'ergonomie de ce portfolio. </p>
+</section>
+<section class="project parts">
+    <h2>Feuille de style</h2>
+    <p>Commençons par la feuille de style, l'élément le plus visible sur n'importe quelle page web. Par feuille de
+        style, j'entends les couleurs, les formes des widgets, les animations et transtitions, sans oublier la
+        typographie.
+
+    </p>
+    <h3>Couleurs</h3>
+    <p>
+        Tout d'abord, j'ai décidé de placer un fond sombre, car c'est l'environnement que je choisi pour travailler,
+        coder, penser.
+        Ensuite, la couleur d'accuentuation devait ressortir suffisamment de la couleur de fond, sans pour autant
+        agresser. De plus, elle devait me correspondre, sans pour autant calquer certains de mes projets importants
+        possèdant leur propre code couleur.
+        Enfin, la couleur doit rester relativement neutre par rapport au thème qu'aborde le site web : le portfolio.
+    </p>
+    <div class="style"><code><span style="color: var(--white)">--accent:</span> rgb(0, 102, 204)<span style="color: orange">;</span></code></div>
+
+    <h3>Typographie</h3>
+    <p>La typographie devait correspondre aux trois domaines abordés dans ce portfolio, sans délaisser l'un ou l'autre.
+        Une typographie à chasse fixe aurait valoriser le domaine de la programmation en déliassant la VFX, tandis
+        qu'une typogrpahie avec serif aurait perdu le game design et la programmation. </p>
+    <div class="style"><code><span style="color: orange">font-family: </span><span
+            style="color: green">'Audiowide'</span><span style="color: var(--white)">, cursive</span><span
+            style="color: orange">;</span>
+    </code></div>
+
+    <h3>Animations/transitions</h3>
+    <p>Les anmations et les transitions permettent de créer des repères et facilité la compréhension de la navigation au sein de l'application ou du site web.
+    <br>Ces animations étaient d'autant plus utile puisque le contenu des différents onglets sont contenus dans la page d'accueil.
+    </p>
+</section>
+<section class="project parts">
+    <h2>Navigation</h2>
+    <p>La navigation au sein du site se veut simple. Il est possibble, par un simple scroll, de naviguer entre toutes les sections, et d'avoir ainsi une vue d'ensemble des projets, classés soigneusement.
+    <br>Cette technique est immersive.
+    </p>
+</section>
+
+<section class="project parts">
+    <h2>Hébergement</h2>
+    <p>La navigation au sein du site se veut simple. Il est possibble, par un simple scroll, de naviguer entre toutes les sections, et d'avoir ainsi une vue d'ensemble des projets, classés soigneusement.
+    <br>Cette technique est immersive.
+    </p>
+</section>
+</body>
+</html>

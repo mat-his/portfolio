@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Android app</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="../index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="../index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="../index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="../index.html#Contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+    </div>
+</header>
+
+<section class="project">
+    <h1>Android App</h1>
+    <img src="../images/android_dancing.png" alt="android is dancing" width="20%">
+    <i>Le 05 Janvier 2021</i>
+    <p>
+        Je travaille actuellement sur une application Android permettant à ses utilisateurs d'éllaborer et de programmer des robots à partir de cartes programmables telles que Raspberry Pi. Le but de cette application est de pouvoir retrouver toutes les fonctionnlités et avantages d'un PC sur son smartphone, de manière ergonomique et synthétique, afin d'utiliser pleinement les capacités de machines que nous emportont tous les jours dans notre poche.</p>
+    <p>
+        L'application établit un environnement de travail qui permet de mettre par écrit ses idées, de schématiser les branchements et montages (en 2D et 3D), d'écrire du code et de l'envoyer sur la carte programmable, et même de piloter à travers différents types d'intéractions le robot que l'utilisateur aura construit.
+        le logiciel utilise des protocoles et connections sans fil tel que le SSH, SFTP, le Bluetooth et la programmation de ports pour communiquer avec le robot, défini en tant que serveur.
+    </p>
+        En prime, ces données sont stockées dans une base de données en tant réel qui permet à plusieurs personnes de collaborer, de partager certains travau à une communauté de personne travaillant autour du même sujet, ou encore de retrouver ses données sur d'autres appareils tel que sur son PC.
+        <br>L'application est initialement écrite en Kotlin, mais bascule en Flutter pour pouvoir s'étendre aux OS Linux, iOS et Web.
+    </p>
+    <br>
+    <p style="font-weight: bold; font-size: large">
+        Le design, les éléments graphiques ainsi que les détails du développement seront visibles très bientôt une fois l'application publiée !
+    </p>
+</section>
+
+</body>
+</html>
