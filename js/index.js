@@ -1,7 +1,7 @@
 var imageContainer;
 
 function init() {
-  console.log("this is init funciton");
+  console.log("this is init function");
 
   imageContainer = document.querySelector('.image-container');
 }
@@ -21,7 +21,7 @@ function menu() {
 
 function scrollToFields() {
   window.scroll({
-      top: 1048,
+      top: 1024,
       behavior: 'smooth'
     });
 // document.getElementById('layout-fields').scrollIntoView({ behavior: 'smooth' });

@@ -2,200 +2,308 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <title>Accueil</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <title>Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css" />
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css" />
-  <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css" />
-  <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/theme.scss"/>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+        }
+    </style>
 </head>
 
 <body onload="init()">
 
-  <!--navbar-->
-  <header>
+<!--navbar-->
+<header>
     <div class="navbar layout-hamburger">
-      <button class="">
+        <button class="">
         <span id="hamburger" class="material-icons" onclick="menu()">
           menu
         </span>
-      </button>
+        </button>
     </div>
     <div class="navbar layout-tabs">
-      <div class="tab" style="flex: 2;">
-        <a href="index.html">
-          <p class="tab active">Lecomte</p>
+        <a href="index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
         </a>
-      </div>
-      <div class="tab" style="flex: 1;">
-        <a href="#dev">
-          <p class="tab">Dev</p>
+        <a href="#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
         </a>
-      </div>
-      <div class="tab" style="flex: 1;">
-        <a href="#slide-2">
-          <p class="tab">Cinema</p>
+        <a href="#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
         </a>
-      </div>
-      <div class="tab" style="flex: 1;">
-        <a href="index.html">
-          <p class="tab">VFX</p>
+        <a href="#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
         </a>
-      </div>
-      <div class="tab" style="flex: 2;">
-        <a href="index.html">
-          <p class="tab">Contact</p>
+        <a href="#Contact" style="flex: 2;">
+            <p class="tab">Contact</p>
         </a>
-      </div>
-      <!--<section>
-      <button class="mdc-button tab-button">
-      <div class="mdc-button__ripple"></div>
-      <div class="mdc-button__label">Greet</div>
-    </button>
-  </section>-->
-</div>
+        <!--<section>
+        <button class="mdc-button tab-button">
+        <div class="mdc-button__ripple"></div>
+        <div class="mdc-button__label">Greet</div>
+      </button>
+    </section>-->
+    </div>
 </header>
 
 <!--image intro-->
 <article class="intro">
-  <img src="images/IMG_20210105_154446.jpg" alt="robot" style="height: 970px; width: 100%; object-fit: cover;">
-  <button class="go" onclick="scrollToFields()">Let's Start</button>
+    <img src="images/dev_laptop_carnet.png" alt="robot" style="height: 970px; width: 100%; object-fit: cover;">
+    <button class="go" onclick="scrollToFields()">Start</button>
+    <!--<button class="cybr-btn">
+        Cyber<span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+    </button>-->
+
+
 </article>
 
 <!--activity field-->
 <main>
-  <section id="layout-fields">
+    <section id="layout-fields">
 
-    <div class="field ">
-      <button class="desc ">Dev</button>
-    </div>
-    <div class="field ">
-      <button class="desc ">Cinema</button>
-    </div>
-    <div class="field ">
-      <button class="desc ">VFX</button>
-    </div>
-  </section>
+        <a href="#dev" class="field">
+            <img class="image-dev" src="images/dev_laptop_carnet.png" alt="dev laptop carnet">
+            <h2>Dev</h2>
+        </a>
+        <a href="#vfx" class="field">
+            <img class="image-vfx" src="images/moustachu_bureau.png" alt="the home story personnage">
+            <h2>VFX</h2>
+        </a>
+        <a href="#game-design" class="field">
+            <img class="image-game-design" src="images/game_design.png" alt="game project">
+            <h2>Game Design</h2>
+        </a>
+    </section>
 
-  <section class="bio">
-    <p style="font-style: italic;">Le 20 Février 2021</p>
-    <h1>Biographie</h1>
+    <!--Biographie-->
+    <section class="bio">
+        <p style="font-style: italic;">Le 20 Février 2021</p>
+        <h1 style="color: black">Biographie</h1>
 
-    <article>
-      <img id="profil-image" src="images/profil.svg" alt="profil image">
-      <p>Mon nom est Lecomte Mathis. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne. <br>Je suis actuellement à l'université, en deuxième année de DUT MMI (Métier du Multimédia et de l'Internet), et j'achève celui-ci par la recherche d'un stage dans les différents domaines que j'ai abordés durant ma formation:<br>
-        cela comprend essentiellement du développement mobile (Android, Flutter) et web (orienté client et serveur), de la gestion de bases de données (MySQL et NoSQL), du Game Design (Unity), de la création audiovisuelle, et enfin du Motion Design.
-      </p>
+        <article>
+            <img id="profil-image" src="images/profil.svg" alt="profil image">
+            <p>Mon nom est Lecomte Mathis. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne. <br>Je
+                suis actuellement à l'université, en deuxième année de DUT MMI (Métier du Multimédia et de l'Internet),
+                et j'achève celui-ci par la recherche d'un stage dans les différents domaines que j'ai abordés durant ma
+                formation. <br>
+                Cela comprend essentiellement du développement mobile (Android, Flutter) et web (orienté client et
+                serveur), de la gestion de bases de données (MySQL et NoSQL), du Game Design (Unity), de la création
+                audiovisuelle, et enfin du Motion Design.
+            </p>
 
-      <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche.
-        Curieux et polyvalent, j'apprends très vite à partir de ce que j'observe, et je prends plaisir à créer, avec à l'appui mes Hobbies.
-      </p>
+            <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents
+                projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche.
+                Curieux et polyvalent, j'apprends très vite à partir de ce que j'observe, et je prends plaisir à créer,
+                avec à l'appui mes Hobbies.
+            </p>
 
-        <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature. Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction du <i>Robot Jerry</i> et apporte régulièrement des améliorations à mes logiciels bureaux et mobiles en développement.</p>
-        <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à comprendre ce que j'observe. </p>
-    </article>
+            <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature.
+                Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction d'un robot <i>Jerry</i> et
+                apporte régulièrement des améliorations à mes logiciels bureaux et mobiles en développement.</p>
+            <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à
+                comprendre ce que j'observe. </p>
+        </article>
 
     </section>
 
     <!--DEV-->
     <section id="dev">
-      <h1>DEV</h1>
-      <article class="projects">
-        <!--onenote for linux-->
-        <div class='responsive'>
-          <a href='' style='text-decoration: none;'>
-            <div class='gallery'>
-              <p>#1</p>
-            </div>
-          </a>
-          <div class='desc'>OneNote 4 Linux</div>
-        </div>
+        <h1>DEV</h1>
+        <article class="projects">
 
-        <!--ma config-->
-        <div class='responsive'>
-          <a href='html/project.html' style='text-decoration: none;'>
-            <div class='gallery'>
-              <p>#1</p>
+            <!--Ce site-->
+            <div class='responsive'>
+                <a href='' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/code_js.png" style="object-position: 18%">
+                    </div>
+                </a>
+                <div class='desc'>Ce site</div>
             </div>
-          </a>
-          <div class='desc'>Ma Config</div>
-        </div>
 
-        <!--jerry-->
-        <div class='responsive'>
-          <a href='html/project.html' style='text-decoration: none;'>
-            <div class='gallery'>
-              <p>#1</p>
+            <!--onenote for linux-->
+            <div class='responsive'>
+                <a href='' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/onenote_4_linux.png" style="object-fit: contain;">
+                    </div>
+                </a>
+                <div class='desc'>OneNote 4 Linux</div>
             </div>
-          </a>
-          <div class='desc'>The Jerry Robot</div>
-        </div>
-      </article>
+
+            <!--PC configuration-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="https://i.ytimg.com/vi/2RbdQW_pxaU/maxresdefault.jpg">
+                    </div>
+                </a>
+                <div class='desc'>PC configuration</div>
+            </div>
+
+            <!--Linux configuration-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/pop_os_logo_ascii.png">
+                    </div>
+                </a>
+                <div class='desc'>Linux configuration</div>
+            </div>
+        </article>
+        <article class="projects">
+            <!--jerry-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/jerry_robot.jpg" style="object-position: 25%">
+                    </div>
+                </a>
+                <div class='desc'>The Jerry Robot</div>
+            </div>
+
+            <!--android app-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery' style="text-align: center; ">
+                        <span class="material-icons" style="width: 100%; font-size: 10em; "
+                              onclick="menu()">android</span>
+                    </div>
+                </a>
+                <div class='desc'>Android app</div>
+            </div>
+
+
+            <!--quizz-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/tux.png" style="object-fit: contain" alt="">
+                    </div>
+                </a>
+                <div class='desc'>Linux Quizz (PHP, MySQL)</div>
+            </div>
+        </article>
+
+
     </section>
 
-<section id="cinema">
-  <h1 style="color: brown">Cinema</h1>
-  <img src="images/the_home_story_affiche.png" class="slide" style="object-fit: cover;" />
-  <!--<div class="slider">
-    <span id="slide-1"></span>
-    <span id="slide-2"></span>
-    <span id="slide-3"></span>
-    <div class="image-container">
-      <img src="images/the_home_story_affiche.png" class="slide" style="object-fit: cover;" />
-    </div>
+    <section id="vfx">
+        <h1 style="color: brown">VFX</h1>
+        <!-- Photo Grid -->
+        <div class="row">
+            <div class="column" id="column1">
+                <img src="images/moustachu_bureau.png" style="width:100%">
+                <h2 style="text-align: center; font-family: 'Special Elite',cursive; color: var(--main-text)">Les
+                    Incroyables aventures du Moustachu</h2>
+            </div>
+            <div class="column" id="column2">
+                <img src="images/the_home_story_affiche.png" style="width:100%">
+                <img src="/w3images/underwater.jpg" style="width:100%">
+            </div>
+        </div>
+    </section>
+    <section id="game-design">
+        <h1>Game Design</h1>
+        <article class="projects">
+            <!--Playground-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery'>
+                        <img src="images/game_design.png" alt="">
+                    </div>
+                </a>
+                <div class='desc'>Playground game</div>
+            </div>
+            <!--Android app 3D extension-->
+            <div class='responsive'>
+                <a href='html/project.html' style='text-decoration: none;'>
+                    <div class='gallery' style="text-align: center">
+                        <span class="material-icons" style="width: 100%; font-size: 10em; "
+                              onclick="menu()">android</span>
+                    </div>
+                </a>
+                <div class='desc'>Android App 3D extension</div>
+            </div>
+        </article>
+    </section>
+</main>
 
-  </div>
-  <div class="buttons">
-    <div id="slide1" onclick="slide1()"></div>
-    <div id="slide2" onclick="slide2()"></div>
-    <div id="slide3" onclick="slide3()"></div>
-  </div>-->
-</section>
-<section id="vfx">
-  <h1 >VFX</h1>
-</section>
-  </main>
 
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
-  <script>
-  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-  window.onscroll = function() {
-    scrollFunction()
-  };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("layout-tabs ").style.padding = "30px 10px ";
-      document.getElementById("logo ").style.fontSize = "25px ";
-    } else {
-      document.getElementById("layout-tabs ").style.padding = "80px 10px ";
-      document.getElementById("logo ").style.fontSize = "35px ";
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("layout-tabs ").style.padding = "30px 10px ";
+            document.getElementById("logo ").style.fontSize = "25px ";
+        } else {
+            document.getElementById("layout-tabs ").style.padding = "80px 10px ";
+            document.getElementById("logo ").style.fontSize = "35px ";
+        }
     }
-  }
-  </script>
+</script>
 
-  <script>
-  includeHTML();
-  init();
+<script>
+    includeHTML();
+    init();
 </script>
 
 </body>
-<footer>
-  <p>Copyright (c) Mathis Lecomte</p>
-  <p>
-    <a href="https://www.legalplace.fr/guides/mentions-legales/">Mentions Légales</a>
-  </p>
+<footer id="Contact">
+    <h1 style="color:var(--white);">Contact</h1>
+
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                        alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, MIT License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Mentions Légales</a>
+        </p>
+    </div>
 </footer>
 
 </html>
