@@ -105,10 +105,26 @@
 </section>
 <section id="hebergement" class="project parts" style="margin-bottom: 10%">
     <h2>Hébergement</h2>
-    <p>Pour l'hébergement du quizz en Php, il est nécesssaire de posséder un environnement LAMP, car PHP est un langage orienté serveur. <br> J'ai donc procédé à la crétation d'une machine virtuelle KVM (Linux) puis à l'installation d'un environnement LAMP dessus (Linux Apache MySQL Php). </p>
+    <p>Pour l'hébergement du quizz en Php, il est nécesssaire de posséder un environnement LAMP, car PHP est un langage
+        orienté serveur. <br> J'ai donc procédé à la crétation d'une machine virtuelle KVM (Linux) puis à l'installation
+        d'un environnement LAMP dessus (Linux Apache MySQL Php). </p>
     <!--IMAGE-->
     <br>
-    <p>Pour ce qui este de la publication, j'ai recréé l'environnement LAMP de ma machine virtuelle sur une machine hébergée sur AWS (Amazon Web Service). Après une installation lente, il suffit d'uploader l'ensemble de mes fichiers, puis de récupérer l'adressse IP publique de la machine. </p>
+    <p>Pour ce qui este de la publication, j'ai recréé l'environnement LAMP de ma machine virtuelle sur une machine
+        hébergée sur AWS (Amazon Web Service).
+
+        En théorie, l'installation de Lamp est désormais très simple, il suffit d'entrer :
+        <br>
+        <br><code style="margin: 1em;font-size: 1.2em">$ sudo apt-get install lamp-server^</code>
+        <br>
+        <br>Malgré tout, plusieurs problèmes émergent lors de l'installation d'un certificat SSL/TLS, ou de phpmyadmin par exemple,
+        pour qu'il soit configuré AVEC apache et ait accès aux fichiers de configuration de mysql.
+
+        De plus, la plateforme AWS a ses propres spéciictés telles que le type de machine (Amazon Linux 2, Amazon AMI, ...) et le Firewall, la clé de chiffrement pour la connexion au serveur via SSH,
+        donc il a fallu s'adapter pour pouvoir installer cet environnement de travail et avoir accès aux fichiers par le moyen de l'adresse publi et d'un navigateur.
+        <br>
+        <br>Enfin, près une installation lente, il suffit d'uploader l'ensemble de mes
+        fichiers avec sftp, ainsi que la base de donnée par drag and drop sur phpmyadmin. </p>
 
 </section>
 <section id="arborescence" class="project parts">
@@ -118,7 +134,10 @@
         <li>/
             <ul class="fichiers">
                 <li>index.php <i>(... page d’accueil ...)</i></li>
-                <li>jeu/ (... partie du site accessible uniquement par les membres ...)</li>
+            </ul>
+        </li>
+        <li>jeu/ (... partie du site accessible uniquement par les membres ...)
+            <ul>
                 <li>quizz.php (... page de lancement du jeu avec les niveaux ...)</li>
                 <li>quest.php (... page avec une question ...)</li>
                 <li>gagne.php (... page lorsque le joueur a gagné ...)</li>
@@ -172,7 +191,7 @@
         <tr>
             <td>Mot de passe <code>[ VARCHAR 32 ]</code></td>
             <td>Enoncé (question) <code>[ VARCHAR 256 ]</code></td>
-            <td>Date <code>[ TIME ]</code></td>
+            <td>Date <code>[ TIMESTAMP ]</code></td>
         </tr>
         <tr>
             <td>Email<code>[ VARCHAR 64 ]</code></td>
