@@ -29,6 +29,8 @@
             --shadow: rgba(0, 0, 0, 0.2);
             --shadow-19: rgba(0, 0, 0, 0.19);
             --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
         }
     </style>
 </head>
@@ -77,7 +79,7 @@
         </a>
     </ul>
 </menu>
-<section class="project" id="intro">
+<section class="project">
     <h1>The Linux Quizz</h1>
     <img src="../images/tux.png" alt="tux" width="20%">
     <i>Le 27 Décembre 2020</i>
@@ -100,10 +102,10 @@
     </p>
 
     <a href="http://18.223.44.218/linux_quizz/index.php" target="_blank">
-        <button class="go">Start</button>
+        <button class="go" style="position: relative">Start</button>
     </a>
 </section>
-<section id="hebergement" class="project parts" style="margin-bottom: 10%">
+<section id="hebergement" class="project">
     <h2>Hébergement</h2>
     <p>Pour l'hébergement du quizz en Php, il est nécesssaire de posséder un environnement LAMP, car PHP est un langage
         orienté serveur. <br> J'ai donc procédé à la crétation d'une machine virtuelle KVM (Linux) puis à l'installation
@@ -121,13 +123,13 @@
         pour qu'il soit configuré AVEC apache et ait accès aux fichiers de configuration de mysql.
 
         De plus, la plateforme AWS a ses propres spéciictés telles que le type de machine (Amazon Linux 2, Amazon AMI, ...) et le Firewall, la clé de chiffrement pour la connexion au serveur via SSH,
-        donc il a fallu s'adapter pour pouvoir installer cet environnement de travail et avoir accès aux fichiers par le moyen de l'adresse publi et d'un navigateur.
+        donc il a fallu s'adapter pour pouvoir installer cet environnement de travail et avoir accès aux fichiers par le moyen de l'adresse public et d'un navigateur.
         <br>
         <br>Enfin, près une installation lente, il suffit d'uploader l'ensemble de mes
-        fichiers avec sftp, ainsi que la base de donnée par drag and drop sur phpmyadmin. </p>
+        fichiers avec sftp, ainsi que la base de données par drag and drop sur phpmyadmin. </p>
 
 </section>
-<section id="arborescence" class="project parts">
+<section id="arborescence" class="project">
     <h2>Arborescence</h2>
     <p>L'arborescence de mes fichiers se présente comme suit :</p>
     <ul id="racines">
@@ -165,7 +167,7 @@
     </ul>
 </section>
 
-<section id="bdd" class="project parts">
+<section id="bdd" class="project">
     <h2>Base de Données</h2>
     <p>La base de données du quizz doit répondre à plusieurs besoins : </p>
     <ul>

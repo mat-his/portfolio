@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux configuration</title>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <script src="../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="../index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="../index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="../index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="../index.html#Contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+    </div>
+</header>
+<menu id="menu-hiding" class="menu" style="visibility: hidden;">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#win10-kvm">
+            <li>Windows 10 sur KVM</li>
+        </a>
+        <a href="#raid-ahci">
+            <li>Conversion RAID vers AHCI</li>
+        </a>
+        <a href="#intel-graphics">
+            <li>Carte graphique intégrée</li>
+        </a>
+        <a href="#conky">
+            <li>Conky</li>
+        </a>
+        <a href="#extensions-gnome">
+            <li>Extensions Gnome</li>
+        </a>
+        <a href="#android-studio">
+            <li>Installation d'Android Studio</li>
+        </a>
+        <a href="#dual-boot">
+            <li>Dual Boot</li>
+        </a>
+    </ul>
+</menu>
+
+<!--image intro-->
+<section id="intro">
+    <img src="../images/unleash_your_robot.webp" alt="robot" style="height: 970px; width: 100%; object-fit: cover;">
+    <div class="over-image-intro project">
+        <h1 style="">Ma configuration Linux</h1>
+        <p> La configuration de mon système d'exploitation est comme un long périple inachevé.
+            <br>Certains travaux furent fastidieux, d'autres très satisfaisants,
+            mais c'est surtout une constante amélioration de mon environnement de travail que j'effectue encore
+            aujourd'hui.
+            <br>Nous allons voir de manière achronologique les différentes améliorations que j'ai apporté à mon système
+            depuis l'aquisition de ma machine.
+        </p>
+    </div>
+    <button class="go" onclick="scrollToFields()">
+        Continuer
+    </button>
+</section>
+
+
+<section class="project soon">
+    <div>
+        <p class="date">Bientôt</p>
+        <h2>Touchscreen</h2>
+        <p>Pop!_OS (basé sur Ubuntu) est d'ores et déjà compatible avec les pilotes des appareils Dell tel que les souris gaming Alienware,
+            les stylos, l'écran tactile, ...
+            <br>Bien que l'intéraction soit sans problèmes, le paramétrage et la personnalisation des commandes, des
+            boutons et des couleurs sont impossibles.
+            <br></p>
+        <p>En conséquence, si les commandes associées par défaut à des boutons ou à des gestes sont peu pratiques ou
+            contreintuitives,
+
+            <a title="KDE, GPLv3 &lt;http://www.gnu.org/licenses/gpl-3.0.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:Calligrakrita-base.svg">
+                <img width="20%" alt="Calligrakrita-base"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/512px-Calligrakrita-base.svg.png">
+            </a>
+            <a title="Tuomas Kuosmanen, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg">
+                <img width="20%"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/600px-The_GIMP_icon_-_gnome.svg.png">
+            </a>
+
+            il est impossible de les modifier, et ça peut poser énormément de problèmes lors de l'utilisation de
+            logiciels de graphismes tels que Krita ou GIMP.
+        </p>
+        <p>Je tenterais de résoudre le problème grâce à différens outils tels que <i>xdotools</i> ou <i>touchegg</i>.
+        </p>
+    </div>
+</section>
+<section class="project" id="win10-kvm">
+    <div>
+        <p class="date">26 Février 2021</p>
+        <h2>Windows 10 revient !</h2>
+        <p>Après avoir changer de Partition Manager (RAID => AHCI), j'ai réalisé sans surprise que Windows 10 ne
+            démrrait plus,
+            l'odinateur m'affichait un écran noir au démarrage, puis bootait sur un autre disque à défaut d'avoir
+            trouver windows 10 fonctionnel.</p>
+        <p>Comme expliqué précédemment, mon utilisation de Windows 10 se réduit aujourd'hui à la mise à jour de
+            firmwares et de mes appareils signés Dell.
+            En revanche, avoir windows 10 sous le coude et en démarrage rapide, pour exécuter ponctuellement des logiciels
+            en exclusivité windows par exemple, peut s'avérer très pratique.
+            <br></p>
+
+        <h3>-Outils</h3>
+        <a href="https://logonoid.com/kvm-logo/" target="_blank">
+            <img class="image-desc"
+                 src="https://logonoid.com/images/thumbs/kvm-logo.png"
+                 alt="KVM Logo"/>
+        </a>
+        <p>C'est la qu'entre en jeu <a href="https://www.linux-kvm.org/page/Main_Page">KVM
+            (Kernel-based Virtual Machine) </a></p>
+        <br>
+
+        <p>KVM est une technologie de virtualisation Open Source intégrée à linux qui permet,
+            pour faire simple, de lancer des machines virtuelles à partir du Kernel lui-même.
+            Cette technique a pour effet de rendre les machines virtuelles beaucoup puissantes puisqu'elles utilisent
+            bien mieux les ressources du système que ne le ferait <a href="https://www.virtualbox.org/">Oracle
+                VirtualBox</a> par exemple.</p>
+        <br>
+        <p>J'utilise souvent KVM pour lancer des machines virtuelles me permettant de tester un <a href="quizz.html">
+            environnement LAMP</a>, des serveurs de base de données MySQL, ou bien même d'utiliser Kali Linux pour ses
+            outils de Pen testing. </p>
+        <p>J'ai donc voulu tenter d'utiliser Windows 10 avec KVM, et sous la main <a href="#extensions-gnome">ma gestion
+            des ressources du CPU (extension Gnome)</a></p>
+        <!--<img class="image-desc-left" src="../images/cpu_managment.png">-->
+        <p>A ma grande surprise, Windows 10 tourne de façon fluide. J'ai évidemment favoriser l'installation de
+            programmes légers, mais même le streaming de vidéos sur Zoom fonctionne. </p>
+        <br>
+        <p>Bien sûr, ayant une carte graphique modeste (Intel UHD Graphics), cette fluidité serait rapidement mise en
+            branle face à l'utilisation de jeux gourmands ou bien de streaming en 4K. Mais ces performances s'avères
+            suffisantes pour mon utililsation. </p>
+
+
+        <h3>-Fonctionnement et Installation</h3>
+        <img class="image-desc-none" src="../images/virtual-machine-manager-logo.png"
+             alt="https://ubuntuhandbook.org/index.php/2013/12/install-virt-manager-ppa-ubuntu-linux/">
+        <p>Pour créer une machine virtuelle KVM, j'utilise l'outil <i>virt-manager</i> en GUI, mais tout peut se faire
+            en ligne de commande grâce à <i>virsh</i> et <i>qemu</i>. </p>
+
+        <p>En ligne de commande, cela donnerait : </p>
+        <div class="code">
+            <code># virt-install --name=win10 \<br>
+                --vcpus=4 \<br>
+                --memory=16024 \<br>
+                --cdrom=/tmp/windows10.iso \<br>
+                --disk size=100 \<br>
+                --os-variant=windows10</code>
+        </div>
+
+
+        <h3>-Lissage</h3>
+        <p>L'idéal dans cette entreprise serait de pouvoir démarrer Windows 10 juste en appuyant sur un bouton dans mon
+            dock (ma barre des favoris)
+            C'est exactement ce que j'ai fais. </p>
+        <h4>STEP 1 :</h4>
+        <p>Créer un script qui démarre ma machine virtuelle, et lance le Desktop Viewer. </p>
+        <code>start_windows10.sh</code>
+        <div class="code">
+            <code>#! /bin/bash<br>
+                <br>
+                virsh start win10<br>
+                virt-viewer -cf qemu:///system win10<br>
+            </code>
+        </div>
+        <p>Puis on accorde les autorisations nécessaires : </p>
+        <div class="code">
+            <code>chmod +x ./start_windows.sh</code>
+        </div>
+        <h4>STEP 2 : </h4>
+        <p>Créer un icone dans le menu des applications</p>
+        <img width="10%" class="image-desc-left" src="../images/windows10.png" alt="">
+        <p>Encore une fois, il y a différents moyens de créer et éditer des icônes dans le menu d'applications.</p>
+        <p>J'aurais pu aller créer un fichier .desktop dans le répertoire <code>~/.local/share/applications</code>, mais
+            je me suis contenté d'utiliser le logiciel <a href="https://doc.ubuntu-fr.org/alacarte">Alacarte</a> pour
+            éditer aisément en mode graphique.
+
+        </p>
+
+    </div>
+</section>
+<section class="project" id="raid-ahci">
+    <div>
+        <p class="date">25 Février 2021</p>
+        <h2>Conversion du disque RAID en AHCI</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+    </div>
+</section>
+<section class="project" id="intel-graphics">
+    <div>
+        <p class="date">Décembre 2020</p>
+        <h2>Les problèmes d'une carte graphique intégrée</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+    </div>
+</section>
+<section class="project" id="conky">
+    <div>
+        <p class="date">Novembre 2020 - </p>
+        <h2>Conky</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+        <img class="image-desc-none" width="70%" src="../images/conky_screenshot.png" alt="desktop screenshot to illustrate conky development">
+
+    </div>
+</section>
+<section class="project" id="extensions-gnome">
+    <div>
+        <p class="date">Novembre 2020 - </p>
+        <h2>Extensions Gnome</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+    </div>
+</section>
+<section class="project" id="android-studio">
+    <div>
+        <p class="date">Novembre 2020</p>
+        <h2>Installation d'Android Studio</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+    </div>
+</section>
+<section class="project" id="dual-boot">
+    <div>
+        <p class="date">12 Janvier 2020 - 30 Septembre 2020</p>
+        <h2>Installation de Linux en dual boot</h2>
+        <p class="soon-available">Article bientôt disponible</p>
+    </div>
+</section>
+</body>
+</html>

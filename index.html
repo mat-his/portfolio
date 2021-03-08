@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/theme.scss"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&effect=anaglyph" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,6 +30,8 @@
             --shadow: rgba(0, 0, 0, 0.2);
             --shadow-19: rgba(0, 0, 0, 0.19);
             --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
         }
     </style>
 </head>
@@ -73,7 +75,7 @@
 <!--image intro-->
 <article class="intro">
     <img src="images/dev_laptop_carnet.png" alt="robot" style="height: 970px; width: 100%; object-fit: cover;">
-    <button class="go" onclick="scrollToFields()">Start</button>
+    <button class="go font-effect-anaglyph" onclick="scrollToFields()">Start</button>
     <!--<button class="cybr-btn">
         Cyber<span aria-hidden>_</span>
         <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
@@ -154,7 +156,7 @@
                         <img src="images/onenote_4_linux.png" style="object-fit: contain; padding: 15%">
                     </div>
                 </a>
-                <div class='desc'>OneNote 4 Linux</div>
+                <div class='desc'>OneNote 4 Linux (Python, GTK+)</div>
             </div>
 
             <!--PC configuration-->
@@ -169,7 +171,7 @@
 
             <!--Linux configuration-->
             <div class='responsive'>
-                <a href='#dev' style='text-decoration: none;'>
+                <a href='html/linux.html' style='text-decoration: none;'>
                     <div class='gallery' style="background-color: #363636">
                         <img src="images/pop_os_logo_ascii.png" style="object-fit: contain; padding: 0">
                     </div>

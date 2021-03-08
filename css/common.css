@@ -1,14 +1,9 @@
-:root {
-
-    --white: #ffffff;
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', cursive;
+    font-family: var(--main-font);
     overflow: visible;
     color: #E1E1E1;
     background-color: #121212;
@@ -17,17 +12,21 @@ body {
 }
 
 h1 {
-    font-family: 'Audiowide', cursive;
+    font-family: var(--title-font);
     color: var(--accent);
 }
 
 h2 {
-    font-family: 'Audiowide', cursive;
+    font-family: var(--title-font);
     color: var(--accent);
 }
+
 h3 {
-    font-family: 'Audiowide', cursive;
+    font-family: var(--title-font);
     color: var(--accent);
+}
+h4 {
+    font-family: var(--title-font);
 }
 
 a {
@@ -42,13 +41,16 @@ a:hover {
 a .active {
     color: var(--accent);
 }
+i {
+    font-weight: bolder;
+}
 
 button.go {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 75%;
-    font-family: 'Audiowide', cursive;
+    font-family: var(--title-font);
     color: var(--main-text);
     border-radius: 5px;
     text-transform: uppercase;
@@ -61,7 +63,7 @@ button.go {
 }
 
 button {
-    font-family: 'Audiowide', cursive;
+    font-family: var(--title-font);
     color: #E1E1E1;
     border: none;
     background-color: #121212;
@@ -73,7 +75,7 @@ button {
 
 footer {
     /*text-align: center;*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--main-font);
     background-color: #212121;
 }
 
@@ -86,7 +88,7 @@ transform: translate(-50%, -50%);
 .legal {
     text-align: center;
     justify-content: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--main-font);
     padding: 2%;
     display: flex;
 }
