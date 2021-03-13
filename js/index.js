@@ -16,25 +16,29 @@ function init() {
   });
 }
 
-var i = 0;
+var bool = false;
 
 function menu() {
   var menu_drawer = document.querySelector(".layout-tabs");
-  if (i%2===0) {
-    menu_drawer.style.display = "inline";
-    i++;
+  if (!bool) {
+    menu_drawer.style.visibility = "visible";
+    bool = true;
   } else {
-    menu_drawer.style.display = "none";
-    i++;
+    menu_drawer.style.visibility = "hidden";
+    bool = false;
   }
 }
 
 function scrollToFields() {
-  window.scroll({
+  /*window.scroll({
       top: 1024,
       behavior: 'smooth'
-    });
-// document.getElementById('layout-fields').scrollIntoView({ behavior: 'smooth' });
+    });*/
+ document.getElementById('fields-adjust').scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToContent() {
+  document.getElementById('fields-adjust').scrollIntoView({ behavior: 'smooth' });
 }
 
 function slide1() {

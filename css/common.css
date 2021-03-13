@@ -49,13 +49,13 @@ button.go {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 75%;
+
     font-family: var(--title-font);
     color: var(--main-text);
     border-radius: 5px;
     text-transform: uppercase;
     background-color: var(--accent);
-    padding: 1em 2em;
+
     border: 4px #cccccc;
     /*background: url('/images/button.png') no-repeat;*/
 
