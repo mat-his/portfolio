@@ -38,7 +38,7 @@
 
 <!--navbar-->
 <header>
-    <div class="navbar layout-hamburger">
+    <div id="button-hamburger" class="navbar layout-hamburger">
         <button class="">
         <span id="hamburger" class="material-icons" onclick="menu()">
           menu
@@ -47,19 +47,19 @@
     </div>
     <div class="navbar layout-tabs">
         <a href="index.html" style="flex: 2;">
-            <p class="tab active">Lecomte</p>
+            <p class="tab active" onclick="hideHamburger()">Lecomte</p>
         </a>
         <a href="#dev" style="flex: 1;">
-            <p class="tab">Dev</p>
+            <p class="tab" onclick="hideHamburger()">Dev</p>
         </a>
         <a href="#vfx" style="flex: 1;">
-            <p class="tab">VFX</p>
+            <p class="tab" onclick="hideHamburger()">VFX</p>
         </a>
         <a href="#game-design" style="flex: 1;">
-            <p class="tab">Game Design</p>
+            <p class="tab" onclick="hideHamburger()">Game Design</p>
         </a>
         <a href="#contact" style="flex: 2;">
-            <p class="tab">Contact</p>
+            <p class="tab" onclick="hideHamburger()">Contact</p>
         </a>
         <!--<section>
         <button class="mdc-button tab-button">

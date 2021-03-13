@@ -36,10 +36,11 @@ header {
 }
 .navbar {
     overflow: hidden;
-    position: fixed;
     top: 0;
     left: 0;
     transition: 0.4s;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .layout-tabs {
@@ -115,6 +116,7 @@ header {
     border: none;
     border-radius: 5px;
     display: block;
+
 }
 
 .image-vfx {
@@ -523,6 +525,9 @@ article.projects {
 }
 .project #image-conky {
     width: 100%;
+}
+.project #image-windows {
+    width: 90%;
 }
 
 .parts {
