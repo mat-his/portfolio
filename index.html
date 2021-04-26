@@ -2,16 +2,16 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Accueil</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css"/>
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/theme.scss"/>
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css" />
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css" />
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/theme.scss" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap&effect=anaglyph" rel="stylesheet">
@@ -21,9 +21,10 @@
 
     <script src="js/index.js"></script>
     <style>
-        :root {
+         :root {
             --background: #121212;
-            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent: rgb(0, 102, 204);
+            /*#0066CC*/
             --accent-shadow: rgba(0, 102, 204, 0.5);
             --shadow: rgba(0, 0, 0, 0.2);
             --shadow-19: rgba(0, 0, 0, 0.19);
@@ -36,249 +37,248 @@
 
 <body onload="init()">
 
-<!--navbar-->
-<header>
-    <div id="button-hamburger" class="navbar layout-hamburger">
-        <button class="">
+    <!--navbar-->
+    <header>
+        <div id="button-hamburger" class="navbar layout-hamburger">
+            <button class="">
         <span id="hamburger" class="material-icons" onclick="menu()">
           menu
         </span>
         </button>
-    </div>
-    <div class="navbar layout-tabs">
-        <a href="index.html" style="flex: 2;">
-            <p class="tab active" onclick="hideHamburger()">Lecomte</p>
-        </a>
-        <a href="#dev" style="flex: 1;">
-            <p class="tab" onclick="hideHamburger()">Dev</p>
-        </a>
-        <a href="#vfx" style="flex: 1;">
-            <p class="tab" onclick="hideHamburger()">VFX</p>
-        </a>
-        <a href="#game-design" style="flex: 1;">
-            <p class="tab" onclick="hideHamburger()">Game Design</p>
-        </a>
-        <a href="#contact" style="flex: 2;">
-            <p class="tab" onclick="hideHamburger()">Contact</p>
-        </a>
-        <!--<section>
+        </div>
+        <div class="navbar layout-tabs">
+            <a href="index.html" style="flex: 2;">
+                <p class="tab active" onclick="hideHamburger()">Lecomte</p>
+            </a>
+            <a href="#dev" style="flex: 1;">
+                <p class="tab" onclick="hideHamburger()">Dev</p>
+            </a>
+            <a href="#vfx" style="flex: 1;">
+                <p class="tab" onclick="hideHamburger()">VFX</p>
+            </a>
+            <a href="#game-design" style="flex: 1;">
+                <p class="tab" onclick="hideHamburger()">Game Design</p>
+            </a>
+            <a href="#contact" style="flex: 2;">
+                <p class="tab" onclick="hideHamburger()">Contact</p>
+            </a>
+            <!--<section>
         <button class="mdc-button tab-button">
         <div class="mdc-button__ripple"></div>
         <div class="mdc-button__label">Greet</div>
       </button>
     </section>-->
-    </div>
-</header>
+        </div>
+    </header>
 
-<!--image intro-->
-<article class="intro">
-    <img id="image-home" src="images/dev_laptop_carnet.png" alt="robot">
-    <button class="go font-effect-anaglyph" onclick="scrollToFields()">Start</button>
-    <!--<button class="cybr-btn">
+    <!--image intro-->
+    <article class="intro">
+        <img id="image-home" src="images/dev_laptop_carnet.png" alt="robot">
+        <button class="go font-effect-anaglyph" onclick="scrollToFields()">Start</button>
+        <!--<button class="cybr-btn">
         Cyber<span aria-hidden>_</span>
         <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
         <span aria-hidden class="cybr-btn__tag">R25</span>
     </button>-->
 
 
-</article>
+    </article>
 
-<!--activity field-->
-<main>
-    <p id="fields-adjust" style="color: var(--background);">dnboILNFOMBIFNboIFN</p>
-    <section id="layout-fields">
+    <!--activity field-->
+    <main>
+        <p id="fields-adjust" style="color: var(--background);">dnboILNFOMBIFNboIFN</p>
+        <section id="layout-fields">
 
-        <a href="#dev" class="field">
-            <img class="image-dev" src="images/dev_laptop_carnet.png" alt="dev laptop carnet">
-            <p>Dev</p>
-        </a>
-        <a href="#vfx" class="field">
-            <img class="image-vfx" src="images/moustachu_bureau.png" alt="the home story personnage">
-            <p>VFX</p>
-        </a>
-        <a href="#game-design" class="field">
-            <img class="image-game-design" src="images/game_design.png" alt="game project">
-            <p>Game Design</p>
-        </a>
-    </section>
+            <a href="#dev" class="field">
+                <img class="image-dev" src="images/dev_laptop_carnet.png" alt="dev laptop carnet">
+                <p>Dev</p>
+            </a>
+            <a href="#vfx" class="field">
+                <img class="image-vfx" src="images/moustachu_bureau.png" alt="the home story personnage">
+                <p>VFX</p>
+            </a>
+            <a href="#game-design" class="field">
+                <img class="image-game-design" src="images/game_design.png" alt="game project">
+                <p>Game Design</p>
+            </a>
+        </section>
 
-    <!--Biographie-->
-    <section class="bio">
-        <p style="font-style: italic;">Le 20 Février 2021</p>
-        <h1 style="color: black">Biographie</h1>
+        <!--Biographie-->
+        <section class="bio">
+            <p style="font-style: italic;">Le 20 Février 2021</p>
+            <h1 style="color: black">Biographie</h1>
 
-        <article>
-            <img id="profil-image" src="images/profil.svg" alt="profil image">
-            <p>Mon nom est Mathis LECOMTE. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne. <br>Je
-                suis actuellement à l'université, en deuxième année de DUT MMI (Métier du Multimédia et de l'Internet),
-                et j'achève celui-ci par la recherche d'un stage dans les différents domaines que j'ai abordés durant ma
-                formation. <br>
-                Cela comprend essentiellement du développement mobile (Android, Flutter) et web (orienté client et
-                serveur), de la gestion de bases de données (MySQL et NoSQL), du Game Design (Unity), de la création
-                audiovisuelle, et enfin du Motion Design.
-            </p>
+            <article>
+                <img id="profil-image" src="images/profil.svg" alt="profil image">
+                <p>Mon nom est Mathis LECOMTE. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne. <br>Je suis actuellement à l'université, en deuxième année de DUT MMI (Métier du Multimédia et de l'Internet), et j'achève celui-ci par
+                    la recherche d'un stage dans les différents domaines que j'ai abordés durant ma formation. <br> Cela comprend essentiellement du développement mobile (Android, Flutter) et web (orienté client et serveur), de la gestion de bases de
+                    données (MySQL et NoSQL), du Game Design (Unity), de la création audiovisuelle, et enfin du Motion Design.
+                </p>
 
-            <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents
-                projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche.
-                Curieux et polyvalent, j'apprends très vite à partir de ce que j'observe, et je prends plaisir à créer,
-                avec à l'appui mes Hobbies.
-            </p>
+                <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche. Curieux et polyvalent, j'apprends
+                    très vite à partir de ce que j'observe, et je prends plaisir à créer, avec à l'appui mes Hobbies.
+                </p>
 
-            <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature.
-                Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction d'un robot <i>Jerry</i> et
-                apporte régulièrement des améliorations à mes logiciels bureaux et mobiles en développement.</p>
-            <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à
-                comprendre ce que j'observe. </p>
-        </article>
+                <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature. Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction d'un robot <i>Jerry</i> et apporte régulièrement des améliorations
+                    à mes logiciels bureaux et mobiles en développement.</p>
+                <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à comprendre ce que j'observe. </p>
+            </article>
 
-    </section>
+        </section>
 
-    <!--DEV-->
-    <section id="dev">
-        <h1>DEV</h1>
-        <article class="projects">
+        <!--DEV-->
+        <section id="dev">
+            <h1>DEV</h1>
+            <article class="projects">
 
-            <!--Ce site-->
-            <div class='responsive'>
-                <a href='html/site.html' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/web_design.png" style="object-fit: contain; filter: invert(1)">
-                    </div>
-                </a>
-                <div class='desc'>Ce site</div>
+                <!--Ce site-->
+                <div class='responsive'>
+                    <a href='html/site.html' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/web_design.png" style="object-fit: contain; filter: invert(1)">
+                        </div>
+                    </a>
+                    <div class='desc'>Ce site</div>
+                </div>
+
+                <!--quizz-->
+                <div class='responsive'>
+                    <a href='html/quizz.html' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/tux.png" style="object-fit: contain; padding: 10%" alt="">
+                        </div>
+                    </a>
+                    <div class='desc'>Linux Quizz (PHP, MySQL)</div>
+                </div>
+
+                <!--Linux configuration-->
+                <div class='responsive'>
+                    <a href='html/linux.html' style='text-decoration: none;'>
+                        <div class='gallery' style="background-color: #363636">
+                            <img src="images/pop_os_logo_ascii.png" style="object-fit: contain; padding: 0">
+                        </div>
+                    </a>
+                    <div class='desc'>Linux configuration</div>
+                </div>
+
+                <!--PC configuration-->
+                <div class='responsive'>
+                    <a href='#dev' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="https://i.ytimg.com/vi/2RbdQW_pxaU/maxresdefault.jpg" style="padding: 0">
+                        </div>
+                    </a>
+                    <div class='desc'>PC configuration</div>
+                </div>
+            </article>
+            <article class="projects">
+                <!--Dahlia-->
+                <div class='responsive'>
+                    <a href='https://github.com/m-lecomte/dahlia' style='text-decoration: none;'>
+                        <div class='gallery' style="background-color: #363636">
+                            <img src="images/Dahlia_Logo_gradient.png" style="object-fit: contain; padding: 0">
+                        </div>
+                    </a>
+                    <div class='desc'>Dahlia : innovative social network</div>
+                </div>
+
+                <!--jerry-->
+                <div class='responsive'>
+                    <a href='#dev' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/jerry_robot.jpg" style="object-position: 25%; padding: 0">
+                        </div>
+                    </a>
+                    <div class='desc'>The Jerry Robot</div>
+                </div>
+
+                <!--android app-->
+                <div class='responsive'>
+                    <a href='html/android.html' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/android_dancing.png" style="object-fit: contain">
+                        </div>
+                    </a>
+                    <div class='desc'>Android app</div>
+                </div>
+
+                <!--onenote for linux-->
+                <div class='responsive'>
+                    <a href='https://github.com/m-lecomte/onenote' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/onenote_4_linux.png" style="object-fit: contain; padding: 15%">
+                        </div>
+                    </a>
+                    <div class='desc'>OneNote 4 Linux (Python, GTK+)</div>
+                </div>
+            </article>
+
+
+        </section>
+
+        <section id="vfx">
+            <h1 style="color: brown">VFX</h1>
+            <!-- Photo Grid -->
+            <div class="row">
+                <div class="column" id="column1">
+                    <iframe style="width:100%;height: 75%" src="https://www.youtube.com/embed/MhwdWIUxYAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="column" id="column2">
+                    <img src="images/the_home_story_affiche.png" style="width:100%">
+                    <img src="/w3images/underwater.jpg" style="width:100%">
+                </div>
             </div>
+        </section>
 
-            <!--onenote for linux-->
-            <div class='responsive'>
-                <a href='#dev' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/onenote_4_linux.png" style="object-fit: contain; padding: 15%">
-                    </div>
-                </a>
-                <div class='desc'>OneNote 4 Linux (Python, GTK+)</div>
-            </div>
-
-            <!--PC configuration-->
-            <div class='responsive'>
-                <a href='#dev' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="https://i.ytimg.com/vi/2RbdQW_pxaU/maxresdefault.jpg" style="padding: 0">
-                    </div>
-                </a>
-                <div class='desc'>PC configuration</div>
-            </div>
-
-            <!--Linux configuration-->
-            <div class='responsive'>
-                <a href='html/linux.html' style='text-decoration: none;'>
-                    <div class='gallery' style="background-color: #363636">
-                        <img src="images/pop_os_logo_ascii.png" style="object-fit: contain; padding: 0">
-                    </div>
-                </a>
-                <div class='desc'>Linux configuration</div>
-            </div>
-        </article>
-        <article class="projects">
-            <!--jerry-->
-            <div class='responsive'>
-                <a href='#dev' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/jerry_robot.jpg" style="object-position: 25%; padding: 0">
-                    </div>
-                </a>
-                <div class='desc'>The Jerry Robot</div>
-            </div>
-
-            <!--android app-->
-            <div class='responsive'>
-                <a href='html/android.html' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/android_dancing.png" style="object-fit: contain">
-                    </div>
-                </a>
-                <div class='desc'>Android app</div>
-            </div>
-
-
-            <!--quizz-->
-            <div class='responsive'>
-                <a href='html/quizz.html' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/tux.png" style="object-fit: contain; padding: 10%" alt="">
-                    </div>
-                </a>
-                <div class='desc'>Linux Quizz (PHP, MySQL)</div>
-            </div>
-        </article>
-
-
-    </section>
-
-    <section id="vfx">
-        <h1 style="color: brown">VFX</h1>
-        <!-- Photo Grid -->
-        <div class="row">
-            <div class="column" id="column1">
-                <img src="images/moustachu_bureau.png" style="width:100%">
-                <h2 style="text-align: center; font-family: 'Special Elite',cursive; color: var(--main-text)">Les
-                    Incroyables aventures du Moustachu</h2>
-            </div>
-            <div class="column" id="column2">
-                <img src="images/the_home_story_affiche.png" style="width:100%">
-                <img src="/w3images/underwater.jpg" style="width:100%">
-            </div>
-        </div>
-    </section>
-
-    <section id="game-design">
-        <h1>Game Design</h1>
-        <article class="projects">
-            <!--Playground-->
-            <div class='responsive'>
-                <a href='html/projects.html' style='text-decoration: none;'>
-                    <div class='gallery'>
-                        <img src="images/game_design.png" alt="" style="padding: 0">
-                    </div>
-                </a>
-                <div class='desc'>Playground game</div>
-            </div>
-            <!--Android app 3D extension-->
-            <div class='responsive'>
-                <a href='html/projects.html' style='text-decoration: none;'>
-                    <div class='gallery' style="text-align: center">
-                        <!--<span class="material-icons" style="width: 100%; font-size: 10em; "
+        <section id="game-design">
+            <h1>Game Design</h1>
+            <article class="projects">
+                <!--Playground-->
+                <div class='responsive'>
+                    <a href='#game-design' style='text-decoration: none;'>
+                        <div class='gallery'>
+                            <img src="images/game_design.png" alt="" style="padding: 0">
+                        </div>
+                    </a>
+                    <div class='desc'>Playground game</div>
+                </div>
+                <!--Android app 3D extension-->
+                <div class='responsive'>
+                    <a href='#game-design' style='text-decoration: none;'>
+                        <div class='gallery' style="text-align: center">
+                            <!--<span class="material-icons" style="width: 100%; font-size: 10em; "
                               onclick="menu()">android</span>-->
-                        <img src="images/android_dancing.png" style="object-fit: contain">
-                    </div>
-                </a>
-                <div class='desc'>Android App 3D extension</div>
-            </div>
-        </article>
-    </section>
-</main>
+                            <img src="images/android_dancing.png" style="object-fit: contain">
+                        </div>
+                    </a>
+                    <div class='desc'>Android App 3D extension</div>
+                </div>
+            </article>
+        </section>
+    </main>
 
 
-<script>
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function () {
-        scrollFunction()
-    };
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("layout-tabs ").style.padding = "30px 10px ";
-            document.getElementById("logo ").style.fontSize = "25px ";
-        } else {
-            document.getElementById("layout-tabs ").style.padding = "80px 10px ";
-            document.getElementById("logo ").style.fontSize = "35px ";
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("layout-tabs ").style.padding = "30px 10px ";
+                document.getElementById("logo ").style.fontSize = "25px ";
+            } else {
+                document.getElementById("layout-tabs ").style.padding = "80px 10px ";
+                document.getElementById("logo ").style.fontSize = "35px ";
+            }
         }
-    }
-</script>
+    </script>
 
-<script>
-    includeHTML();
-    init();
-</script>
+    <script>
+        includeHTML();
+        init();
+    </script>
 
 </body>
 <footer id="contact">
@@ -286,8 +286,7 @@
 
     <article class="contact">
         <a href="mailto:vm.lecomte@gmail.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                        alt="Gmail icon 2020" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail icon 2020">
         </a>
         <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
             <img src="images/linkedin_original.png" alt="linkedin logo">
@@ -299,7 +298,9 @@
     </article>
 
     <div class="legal">
-        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <a href="mailto:vm.lecomte@gmail.com">
+            <p>vm.lecomte@gmail.com</p>
+        </a>
         <p class="separator"> | </p>
         <p>Mathis Lecomte, GPL-3.0 License</p>
         <p class="separator"> | </p>
