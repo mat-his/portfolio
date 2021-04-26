@@ -398,7 +398,6 @@ article.projects {
 }*/
 
 .column img {
-    margin-top: 8px;
     vertical-align: middle;
     width: 100%;
     border-radius: 5px;
@@ -410,7 +409,7 @@ article.projects {
     flex: 65%;
     max-width: 65%;
     max-height: 65%;
-    padding: 0 4px;
+    padding: 0 0.5em;
 }
 
 #column2 {
@@ -418,7 +417,12 @@ article.projects {
     /* IE10 */
     flex: 35%;
     max-width: 35%;
-    padding: 0 4px;
+    padding: 0 0.5em;
+}
+
+#column2 img,
+div {
+    margin-bottom: 1em;
 }
 
 
