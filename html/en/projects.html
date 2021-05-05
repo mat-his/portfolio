@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/medium.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="/html/fr/index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="/html/fr/index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="/html/fr/index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="/html/fr/index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/angleterre.png" alt="english">
+            <div class="dropdown-content">
+                <a href="../fr/projects.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../ch/projects.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Legal Notice</a>
+        </p>
+    </div>
+</footer>
+</html>

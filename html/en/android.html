@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Android app</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/angleterre.png" alt="english">
+            <div class="dropdown-content">
+                <a href="../fr/android.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../ch/android.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project">
+    <h1>Android App</h1>
+    <img src="../../images/android_dancing.png" alt="android is dancing" width="20%">
+    <i>Le 05 Janvier 2021</i>
+    <p>
+        I am currently working on an Android application allowing its users to develop and program robots from
+        programmable cards such as Raspberry Pi. The goal of this application is to be able to find all the functions
+        and advantages of a PC on your smartphone , in an ergonomic and synthetic way, in order to fully use the
+        capacities of machines that we carry every day in our pocket. </p>
+    <p>The application establishes a working environment that allows you to write down your ideas, to diagram the
+        connections and assemblies (in 2D and 3D), to write code and send it to the programmable card, and even to pilot
+        the robot that the user will have built through different types of interactions.
+        the software uses wireless protocols and connections such as SSH, SFTP, Bluetooth and port programming to
+        communicate with the robot, defined as a server. </p>
+    As a bonus, this data is stored in a real-time database that allows multiple people to
+    collaborate, share some work with a community of people working around the same subject, or
+    find his data on other devices such as on his PC.
+    <br>The application is initially written in Kotlin, but switches to Flutter to be able to extend to Linux OS,
+    iOS and Web.
+    </p>
+    <br>
+    <p style="font-weight: bold; font-size: large">
+        The design, graphics as well as development details will be visible very soon once
+        the application published!
+    </p>
+</section>
+
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Legal Notice</a>
+        </p>
+    </div>
+</footer>
+</html>

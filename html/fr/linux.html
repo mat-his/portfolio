@@ -4,11 +4,11 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux configuration</title>
 
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/wide.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/small.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
     <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
-    <link rel="stylesheet" href="../css/common.css"/>
-    <link rel="stylesheet" href="../css/theme.scss"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-    <script src="../js/index.js"></script>
+    <script src="../../js/index.js"></script>
     <style>
         :root {
             --background: #121212;
@@ -42,19 +42,19 @@
         </button>
     </div>
     <div class="navbar layout-tabs">
-        <a href="../index.html" style="flex: 2;">
+        <a href="index.html" style="flex: 2;">
             <p class="tab active">Lecomte</p>
         </a>
-        <a href="../index.html#dev" style="flex: 1;">
+        <a href="index.html#dev" style="flex: 1;">
             <p class="tab">Dev</p>
         </a>
-        <a href="../index.html#vfx" style="flex: 1;">
+        <a href="index.html#vfx" style="flex: 1;">
             <p class="tab">VFX</p>
         </a>
-        <a href="../index.html#game-design" style="flex: 1;">
+        <a href="index.html#game-design" style="flex: 1;">
             <p class="tab">Game Design</p>
         </a>
-        <a href="../index.html#Contact" style="flex: 2;">
+        <a href="#contact" style="flex: 2;">
             <p class="tab">Contact</p>
         </a>
     </div>
@@ -89,12 +89,19 @@
         <a href="#dual-boot">
             <li>Dual Boot</li>
         </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/france.png" alt="french" />
+            <div class="dropdown-content">
+                <a href="../en/linux.html"><img src="../../images/angleterre.png" alt="english"></a>
+                <a href="../ch/linux.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
     </ul>
 </menu>
 
 <!--image intro-->
 <section id="intro">
-    <img src="../images/unleash_your_robot.webp" alt="robot" id="image-linux">
+    <img src="../../images/unleash_your_robot.webp" alt="robot" id="image-linux">
     <div class="over-image-intro project">
 
         <h1 id="title-linux-config">Ma configuration Linux</h1>
@@ -187,7 +194,7 @@
 
 
         <h3>-Fonctionnement et Installation</h3>
-        <img class="image-desc-none" src="../images/virtual-machine-manager-logo.png"
+        <img class="image-desc-none" src="../../images/virtual-machine-manager-logo.png"
              alt="https://ubuntuhandbook.org/index.php/2013/12/install-virt-manager-ppa-ubuntu-linux/">
         <p>Pour créer une machine virtuelle KVM, j'utilise l'outil <i>virt-manager</i> en GUI, mais tout peut se faire
             en ligne de commande grâce à <i>virsh</i> et <i>qemu</i>. </p>
@@ -223,7 +230,7 @@
         </div>
         <h4>STEP 2 : </h4>
         <p>Créer un icône dans le menu des applications</p>
-        <img id="image-windows" class="image-desc-left" src="../images/windows10.png" alt="">
+        <img id="image-windows" class="image-desc-left" src="../../images/windows10.png" alt="">
         <p>Encore une fois, il y a différents moyens de créer et éditer des icônes dans le menu d'applications.</p>
         <p>J'aurais pu aller créer un fichier .desktop dans le répertoire <code>~/.local/share/applications</code>, mais
             je me suis contenté d'utiliser le logiciel <a href="https://doc.ubuntu-fr.org/alacarte">Alacarte</a> pour
@@ -252,7 +259,7 @@
         <p class="date">Décembre 2020 - </p>
         <h2>Conky</h2>
         <p class="soon-available">Article bientôt disponible</p>
-        <img class="image-desc-none" id="image-conky" src="../images/conky_screenshot.png" alt="desktop screenshot to illustrate conky development">
+        <img class="image-desc-none" id="image-conky" src="../../images/conky_screenshot.png" alt="desktop screenshot to illustrate conky development">
 
     </div>
 </section>
@@ -285,4 +292,29 @@
     </div>
 </section>
 </body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Mentions Légales</a>
+        </p>
+    </div>
+</footer>
 </html>

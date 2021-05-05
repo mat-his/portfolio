@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le site</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/angleterre.png" alt="english">
+            <div class="dropdown-content">
+                <a href="../fr/site.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../ch/site.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project" id="intro">
+    <img src="../../images/web_design.png" alt="tux" id="image-site">
+    <h1> The website </h1>
+    <i> February 15, 2021 </i>
+    <p> The present site on which you are browsing does not inherit any template (except Google fonts / icons). The
+        animations, the stylesheet and the
+        layout were "handmade".
+        <br> The aim of this website is to be able to clearly present who I am, what I do and how I
+        the fact. The challenge might seem simple, but it was complex.
+        <br> Indeed, the key is not to list what we are, but to think about how to
+        synthesize and enhance it.
+    </p>
+    <p> So, I decided to combine my skills in three sections: </p>
+    <ul>
+        <li> Development ("dev" for friends),</li>
+        <li> VFX (special effects, motion design),</li>
+        <li> and game design (conception of 3D models, programming on Unity).</li>
+    </ul>
+    <p> In this article, we are going to see how the ergonomics of this portfolio have been thought out. </p>
+</section>
+
+<menu class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#hebergement">
+            <li>Stylesheet</li>
+        </a>
+        <a href="#arborescence">
+            <li>Navigation</li>
+        </a>
+        <a href="#bdd">
+            <li>Hosting</li>
+        </a>
+    </ul>
+</menu>
+
+<section class="project parts">
+    <h2> Style sheet </h2>
+    <p> Let's start with the stylesheet, the most visible element on any web page. Per sheet of
+        style, I hear the colors, the shapes of the widgets, the animations and transtitions, without forgetting the
+        typography.
+
+    </p>
+    <h3>Couleurs</h3>
+    <h3> Colors </h3>
+    <p>
+        First of all, I decided to place a dark background, because this is the environment that I choose to work,
+        to code, to think.
+        Then, the accent color had to stand out sufficiently from the background color, without
+        assault. In addition, she had to correspond to me, without copying some of my important projects
+        with their own color code.
+        Finally, the color must remain relatively neutral in relation to the theme that the website addresses: the
+        portfolio.
+    </p>
+    <div class="style"><code><span style="color: var(--main-text)">--accent:</span> rgb(0, 102, 204)<span
+            style="color: orange">;</span></code></div>
+
+    <h3> Typography </h3>
+    <p> The typography had to correspond to the three areas covered in this portfolio, without neglecting one or the
+        other.
+        A fixed-width typography would enhance the field of programming by relaxing the VFX, while
+        that a typography with serif would have lost the game design and the programming. </p>
+    <div class="style"><code><span style="color: orange">font-family: </span><span
+            style="color: green">'Audiowide'</span><span style="color: var(--main-text)">, cursive</span><span
+            style="color: orange">;</span>
+    </code></div>
+
+    <h3> Animations / transitions </h3>
+    <p> Animations and transitions are used to create benchmarks and facilitate understanding of navigation within the
+        application or website.
+        <br> These animations were all the more useful since the contents of the different tabs are contained in the
+        home page.
+    </p>
+</section>
+<section class="project parts">
+    <h2> Navigation </h2>
+    <p> The navigation within the site is intended to be simple. It is possible, by a simple scroll, to navigate between
+        all the sections, and thus to have an overview of the projects, carefully classified.
+        <br> This technique is immersive.
+    </p>
+</section>
+
+<section class="project parts">
+    <h2> Accommodation </h2>
+    <p> The navigation within the site is intended to be simple. It is possible, by a simple scroll, to navigate between
+        all the sections, and thus to have an overview of the projects, carefully classified.
+        <br> This technique is immersive.
+    </p>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Legal Notice</a>
+        </p>
+    </div>
+</footer>
+</html>

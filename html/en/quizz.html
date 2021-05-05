@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>The Linux Quizz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/angleterre.png" alt="english">
+            <div class="dropdown-content">
+                <a href="../fr/quizz.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../ch/quizz.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project">
+    <img src="../../images/tux.png" alt="tux" width="20%">
+    <h1> The Linux Quizz </h1>
+    <i> December 27, 2020 </i>
+    <p> The Linux Quizz is a 12 question quiz about the Linux operating system and its many
+        applications. </p>
+    <p> The goal of this quiz is above all to handle a MySQL database from a PHP code, allowing a
+        authentication by login pattern, management of a session and incrementation of a player's score. This quiz
+        therefore allows to:
+    </p>
+    <ul>
+        <li>Create an online account (the identifiers are saved in the database (BDD))</li>
+        <li>Log in with a username, valid email address and password</li>
+        <li>Play the quiz with ephemeral session variables.</li>
+        <li>Saving the results in the database.</li>
+        <li>Logout</li>
+    </ul>
+    <p> We would like to thank qcmquiz.com and quizz.biz for their relevant questions about GNU Linux.
+        <br> <i> https://www.qcmquiz.com/Database/Quiz-Unix-Linux.php </i>
+        <br> <i> https://www.quizz.biz/quizz-8251.html </i>
+    </p>
+
+    <a href="http://18.223.44.218/linux_quizz/index.php" target="_blank">
+        <button id="button-linux" class="go" style="position: relative">Start</button>
+    </a>
+</section>
+<menu class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#hebergement">
+            <li>Hosting</li>
+        </a>
+        <a href="#arborescence">
+            <li>Tree structure</li>
+        </a>
+        <a href="#bdd">
+            <li>Database</li>
+        </a>
+    </ul>
+</menu>
+<section id="hebergement" class="project">
+    <h2> Accommodation </h2>
+    <p> For hosting the quiz in Php, it is necessary to have a LAMP environment, because PHP is a language
+        server oriented. <br> So I proceeded to the creation of a KVM virtual machine (Linux) then to the installation
+        a LAMP environment on it (Linux Apache MySQL Php). </p>
+    <!--IMAGE-->
+    <br>
+    <p> For what remains of the post, I have recreated the LAMP environment of my virtual machine on a machine
+        hosted on AWS (Amazon Web Service).
+
+        In theory, installing Lamp is now very easy, just enter:
+        <br>
+        <br> <code style="margin: 1em; font-size: 1.2em"> $ sudo apt-get install lamp-server ^ </code>
+        <br>
+        <br> Despite everything, several problems emerge when installing an SSL / TLS certificate, or phpmyadmin
+        for example,
+        so that it is configured WITH apache and has access to the mysql configuration files.
+
+        In addition, the AWS platform has its own specificities such as the type of machine (Amazon Linux 2, Amazon AMI,
+        ...) and the Firewall, the encryption key for connecting to the server via SSH,
+        So we had to adapt to be able to install this working environment and have access to the files through the
+        using the public address and a browser.
+        <br>
+        <br> Finally, after a slow installation, all you have to do is upload all of my
+        files with sftp, as well as the database by drag and drop on phpmyadmin. </p>
+
+</section>
+<section id="arborescence" class="project">
+    <h2>Tree structure></h2>
+        <p> The tree structure of my files looks like this: </p>
+        <ul id="racines">
+            <li>/
+                <ul class="fichiers">
+                    <li>index.php <i>(... home page ...)</i></li>
+                </ul>
+            </li>
+            <li>jeu/ (... part of the site accessible only by members ...)
+                <ul>
+                    <li>quizz.php (... game launch page with levels ...)</li>
+                    <li>quest.php (... page with a question ...)</li>
+                    <li>gagne.php (... page when the player won ...)</li>
+                    <li>score.php (... page with the best scores ...)</li>
+                </ul>
+            </li>
+            <li>php/
+                <ul>
+                    <li>bd.inc.php (... DB configuration ...)</li>
+                    <li>connexion.inc.php (... DB connection file ...)</li>
+                    <li>mire.inc.php (... login pattern ...)</li>
+                    <li>authorise.inc.php (... the user is logged in ...)</li>
+                </ul>
+            </li>
+            <li>css/
+                <ul>
+                    <li>quizz.css (... the CSS file ...)</li>
+                </ul>
+            </li>
+            <li>img/ ( ... contains all images ...)
+                <ul>
+                    <li>tux.png</li>
+                </ul>
+            </li>
+        </ul>
+</section>
+
+<section id="bdd" class="project">
+    <h2>Database</h2>
+    <p> The quiz database must meet several needs: </p>
+    <ul>
+        <li> Authenticate users</li>
+        <li> Host the list of questions</li>
+        <li> Host the different answers, and annotate the correct one</li>
+        <li> Count the score of one or more players</li>
+    </ul>
+    <p> To meet these needs, the database is structured as follows:
+        <br> <i> (* represent primary keys) </i>
+    </p>
+    <table id="bdd-table">
+        <tr>
+            <th> Player</th>
+            <th> Questions</th>
+            <th> Score</th>
+        </tr>
+        <tr>
+            <td> Login <code> [VARCHAR 32] [PRIMARY] </code></td>
+            <td> Identifier <code> [VARCHAR 32] [PRIMARY] </code></td>
+            <td> Identifier <code> [VARCHAR 32] [PRIMARY] </code></td>
+        </tr>
+        <tr>
+            <td> Password <code> [VARCHAR 32] </code></td>
+            <td> Statement (question) <code> [VARCHAR 256] </code></td>
+            <td> Date <code> [TIMESTAMP] </code></td>
+        </tr>
+        <tr>
+            <td> Email <code> [VARCHAR 64] </code></td>
+            <td> Response 1 <code> [VARCHAR 32] </code></td>
+            <td> Player <code> [VARCHAR 32] [PRIMARY] </code></td>
+        </tr>
+        <tr>
+            <td> -</td>
+            <td> Response 2 <code> [VARCHAR 32] </code></td>
+            <td> Score <code> [INT] </code></td>
+        </tr>
+        <tr>
+            <td> -</td>
+            <td> Response 3 <code> [VARCHAR 32] </code></td>
+            <td> -</td>
+        </tr>
+        <tr>
+            <td> -</td>
+            <td> Response 4 <code> [VARCHAR 32] </code></td>
+            <td> -</td>
+        </tr>
+        <tr>
+            <td> -</td>
+            <td> Correct answer number <code> [INT] </code></td>
+            <td> -</td>
+        </tr>
+        <tr>
+            <td> -</td>
+            <td> Difficulty (1, 2 or 3) <code> [INT] </code></td>
+            <td> -</td>
+        </tr>
+    </table>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Legal Notice</a>
+        </p>
+    </div>
+</footer>
+</html>

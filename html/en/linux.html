@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux configuration</title>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="index.html" style="flex: 2;">
+            <p class="tab active">Lecomte</p>
+        </a>
+        <a href="index.html#dev" style="flex: 1;">
+            <p class="tab">Dev</p>
+        </a>
+        <a href="index.html#vfx" style="flex: 1;">
+            <p class="tab">VFX</p>
+        </a>
+        <a href="index.html#game-design" style="flex: 1;">
+            <p class="tab">Game Design</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab">Contact</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/angleterre.png" alt="english">
+            <div class="dropdown-content">
+                <a href="../fr/linux.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../ch/linux.html"><img src="../../images/chine.png" alt="chinese"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<menu id="menu-hiding" class="menu" style="visibility: hidden;">
+    <h2>Menu</h2>
+    <ul>
+        <a href="#intro">
+            <li> Introduction</li>
+        </a>
+        <a href="#win10-kvm">
+            <li> Windows 10 on KVM</li>
+        </a>
+        <a href="#raid-ahci">
+            <li> Converting RAID to AHCI</li>
+        </a>
+        <a href="#intel-graphics">
+            <li> Integrated graphics card</li>
+        </a>
+        <a href="#conky">
+            <li> Conky</li>
+        </a>
+        <a href="#fingerprint-reader">
+            <li> Fingerprint sensor</li>
+        </a>
+        <a href="#extensions-gnome">
+            <li> Gnome Extensions</li>
+        </a>
+        <a href="#android-studio">
+            <li> Installing Android Studio</li>
+        </a>
+        <a href="#dual-boot">
+            <li> Dual Boot</li>
+        </a>
+    </ul>
+</menu>
+
+<!--image intro-->
+<section id="intro">
+    <img src="../../images/unleash_your_robot.webp" alt="robot" id="image-linux">
+    <div class="over-image-intro project">
+
+        <h1 id="title-linux-config">My Linux configuration</h1>
+        <p> Setting up my operating system is like a long, unfinished journey.
+            <br> Some works were tedious, others very satisfactory,
+            but it is above all a constant improvement of my work environment that I still carry out
+            today.
+            <br> We will see in an achronological way the various improvements that I have made to my system
+            since the acquisition of my machine.
+        </p>
+    </div>
+    <button id="button-linux" class="go" onclick="scrollToFields()">
+        Start
+    </button>
+    <p id="fields-adjust" style="color: transparent;">dnboILNFOMBIFNboIFN</p>
+</section>
+
+<section class="project soon">
+    <div>
+        <p class="date">Soon available</p>
+        <h2>Touchscreen</h2>
+        <p> Pop! _OS (based on Ubuntu) is already compatible with drivers for Dell devices such as Alienware gaming
+            mice,
+            pens, touch screen, ...
+            <br> Although the interaction is without problems, the setting and customization of the commands,
+            buttons and colors are impossible.
+            <br>
+        </p>
+        <p>As a result, if the default controls associated with buttons or gestures are impractical or
+            counterintuitives,
+
+            <a title="KDE, GPLv3 &lt;http://www.gnu.org/licenses/gpl-3.0.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:Calligrakrita-base.svg">
+                <img width="20%" alt="Calligrakrita-base"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/512px-Calligrakrita-base.svg.png">
+            </a>
+            <a title="Tuomas Kuosmanen, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg">
+                <img width="20%"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/600px-The_GIMP_icon_-_gnome.svg.png"
+                     alt="">
+            </a>
+
+            it is not possible to modify them, and this can cause a lot of problems when using
+            graphics software such as Krita or GIMP.
+        </p>
+        <p> I would try to solve the problem using different tools such as <i> xdotools </i> or <i> Touchegg </i>.
+        </p>
+    </div>
+</section>
+<section class="project" id="win10-kvm">
+    <div>
+        <p class="date">February 26, 2021</p>
+        <h2>Windows 10 comeback !</h2>
+        <p> After changing the Partition Manager (RAID => AHCI), I realized without surprise that Windows 10 does not
+            no longer demonstrated,
+            the computer displayed a black screen on startup, then booted on another disk if I didn't have
+            find windows 10 working. </p>
+        <p> As explained previously, my use of Windows 10 today is reduced to updating
+            firmwares and my Dell-signed devices.
+            On the other hand, having Windows 10 under the elbow and in fast start, to occasionally execute
+            software
+            exclusively for windows, for example, can be very practical.
+            <br></p>
+
+        <h3>Tools</h3>
+        <a href="https://logonoid.com/kvm-logo/" target="_blank">
+            <img class="image-desc"
+                 src="https://logonoid.com/images/thumbs/kvm-logo.png"
+                 alt="KVM Logo"/>
+        </a>
+        <p>This is where it comes into play <a href="https://www.linux-kvm.org/page/Main_Page">KVM
+            (Kernel-based Virtual Machine) </a></p>
+        <br>
+
+        <p>KVM is an Open Source virtualization technology integrated into linux that allows,
+            to put it simply, launch virtual machines from the Kernel itself.
+            This technique has the effect of making virtual machines very powerful since they use
+            much better system resources than would <a href="https://www.virtualbox.org/">Oracle
+                VirtualBox</a> for example.</p>
+        <br>
+        <p> I often use KVM to launch virtual machines allowing me to test a <a href="quizz.html">
+            LAMP environment </a>, MySQL database servers, or even to use Kali Linux for its
+            Pen testing tools. </p>
+        <p> So I wanted to try to use Windows 10 with KVM, and <a href="#extensions-gnome"> my management
+            CPU resources (Gnome extension) </a></p>
+        <!--<img class="image-desc-left" src="../images/cpu_managment.png">-->
+        <p> To my surprise, Windows 10 runs smoothly. I obviously favor the installation of
+            lightweight programs, but even video streaming on Zoom works. </p>
+        <br>
+        <p> Of course, having a modest graphics card (Intel UHD Graphics), this fluidity would quickly be implemented.
+            shakes in the face of the use of greedy games or streaming in 4K. But these performances prove
+            sufficient for my use. </p>
+
+
+        <h3> -Operation and Installation </h3>
+        <img class="image-desc-none" src="../../images/virtual-machine-manager-logo.png"
+             alt="https://ubuntuhandbook.org/index.php/2013/12/install-virt-manager-ppa-ubuntu-linux/">
+        <p> To create a KVM virtual machine, I use the <i> virt-manager </i> tool in GUI, but anything can be done
+            in command line thanks to <i> virsh </i> and <i> qemu </i>. </p>
+
+        <p> In command line, this would give: </p>
+        <div class="code">
+            <code># virt-install --name=win10 \<br>
+                --vcpus=4 \<br>
+                --memory=16024 \<br>
+                --cdrom=/tmp/windows10.iso \<br>
+                --disk size=100 \<br>
+                --os-variant=windows10</code>
+        </div>
+
+
+        <h3> -Smoothing </h3>
+        <p> The ideal in this business would be to be able to start Windows 10 just by pressing a button in my
+            dock (my favorites bar)
+            This is exactly what I did. </p>
+        <h4> STEP 1: </h4>
+        <p> Create a script that starts my virtual machine, and launches the Desktop Viewer. </p>
+        <code> start_windows10.sh </code>
+        <div class="code">
+            <code>#! /bin/bash<br>
+                <br>
+                virsh start win10<br>
+                virt-viewer -cf qemu:///system win10<br>
+            </code>
+        </div>
+        <p> Then we grant the necessary permissions: </p>
+        <div class="code">
+            <code>chmod +x ./start_windows.sh</code>
+        </div>
+        <h4> STEP 2: </h4>
+        <p> Create an icon in the applications menu </p>
+        <img id="image-windows" class="image-desc-left" src="../../images/windows10.png" alt="">
+        <p> Again, there are different ways to create and edit icons in the app menu. </p>
+        <p> I could have gone to create a .desktop file in the <code> ~/.local/share/applications </code> directory, but
+            I just used the software <a href="https://doc.ubuntu-fr.org/alacarte"> Alacarte </a> for
+            easily edit in graphic mode.
+
+        </p>
+
+    </div>
+</section>
+<section class="project" id="raid-ahci">
+    <div>
+        <p class="date"> February 25, 2021 </p>
+        <h2> Converting RAID disk to AHCI </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+<section class="project" id="intel-graphics">
+    <div>
+        <p class="date"> December 2020 </p>
+        <h2> Problems with an integrated graphics card </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+<section class="project" id="conky">
+    <div>
+        <p class="date"> December 2020 - </p>
+        <h2> Conky </h2>
+        <p class="soon-available"> Item available soon </p>
+        <img class="image-desc-none" id="image-conky" src="../../ images / conky_screenshot.png"
+             alt="desktop screenshot to illustrate conky development">
+
+    </div>
+</section>
+<section class="project" id="fingerprint-reader">
+    <div>
+        <p class="date"> November 2020 - </p>
+        <h2> Fingerprint reader </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+<section class="project" id=extensions-gnome">
+    <div>
+        <p class="date"> October 2020 - </p>
+        <h2> Gnome Extensions </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+<section class="project" id="android-studio">
+    <div>
+        <p class="date"> November 2020 </p>
+        <h2> Installing Android Studio </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+<section class="project" id="dual-boot">
+    <div>
+        <p class="date"> January 12, 2020 - September 30, 2020 </p>
+        <h2> Installing Linux in dual boot </h2>
+        <p class="soon-available"> Item available soon </p>
+    </div>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">Legal Notice</a>
+        </p>
+    </div>
+</footer>
+</html>
