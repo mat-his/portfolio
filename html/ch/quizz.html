@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>The Linux Quizz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../../index_ch.html" style="flex: 2;">
+            <p class="tab active" onclick="hideHamburger()">Lecomte</p>
+        </a>
+        <a href="../../index_ch.html#dev" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">发展</p>
+        </a>
+        <a href="../../index_ch.html#vfx" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">视觉特效</p>
+        </a>
+        <a href="../../index_ch.html#game-design" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">游戏设计</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab" onclick="hideHamburger()">接触</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/chine.png" alt="chinese">
+            <div class="dropdown-content">
+                <a href="../../html/fr/quizz.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../../html/en/quizz.html"><img src="../../images/angleterre.png" alt="english"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project">
+    <img src="../../images/tux.png" alt="tux" width="20%">
+    <h1>Linux测验</h1>
+    <i>2020年12月27日</i>
+    <p> Linux Quizz是有关Linux操作系统及其许多功能的12个问题测验
+        应用程序。 </p>
+    <p>此测验的目标首先是从PHP代码处理MySQL数据库，从而允许
+        通过登录模式进行身份验证，管理会话并增加玩家的分数。 测验
+        因此允许：</p>
+    <ul>
+        <li>创建一个在线帐户（标识符保存在数据库（BDD）中）</li>
+        <li>使用用户名，有效的电子邮件地址和密码登录</li>
+        <li>使用临时会话变量进行测验。</li>
+        <li>将结果记录在数据库中。</li>
+        <li>登出</li>
+    </ul>
+    <p>因此，我们要感谢qcmquiz.com和quizz.biz与GNU Linux有关的问题。
+        <br> <i> https://www.qcmquiz.com/Database/Quiz-Unix-Linux.php </i>
+        <br> <i> https://www.quizz.biz/quizz-8251.html </i></p>
+
+    <a href="http://18.223.44.218/linux_quizz/index.php" target="_blank">
+        <button id="button-linux" class="go" style="position: relative">开始</button>
+    </a>
+</section>
+<menu class="menu">
+    <h2>菜单</h2>
+    <ul>
+        <a href="#intro">
+            <li>介绍</li>
+        </a>
+        <a href="#hebergement">
+            <li>住宿</li>
+        </a>
+        <a href="#arborescence">
+            <li>树状结构</li>
+        </a>
+        <a href="#bdd">
+            <li>数据库</li>
+        </a>
+    </ul>
+</menu>
+<section id="hebergement" class="project">
+    <h2>住宿</h2>
+    <p>要在Php中托管测验，必须有一个LAMP环境，因为PHP是一种语言
+        面向服务器。 <br>因此，我着手创建KVM虚拟机（Linux），然后进行安装
+        一个LAMP环境（Linux Apache MySQL Php）。</p>
+    <!--IMAGE-->
+    <br>
+    <p>对于剩下的内容，我在计算机上重新创建了虚拟机的LAMP环境。
+        托管在AWS（Amazon Web Service）上。
+
+        从理论上讲，安装Lamp现在非常容易，只需输入：
+        <br>
+        <br> <code style="margin:1em; font-size:1.2em"> $ sudo apt-get install lamp-server^ </code>
+        <br>
+        <br>尽管如此，安装SSL / TLS证书或phpmyadmin时仍会出现一些问题，
+        这样就可以使用apache对其进行配置，并且可以访问mysql配置文件。
+
+        此外，AWS平台具有其自身的特殊性，例如机器类型（Amazon Linux 2，Amazon AMI等）和防火墙，用于通过SSH连接到服务器的加密密钥，
+        因此，我们必须进行调整以能够安装此工作环境，并能够通过公共地址和浏览器访问文件。
+        <br>
+        <br>最后，安装缓慢后，您要做的就是上传我所有的
+        带有sftp的文件，以及通过在phpmyadmin上拖放的数据库。</p>
+
+</section>
+<section id="arborescence" class="project">
+    <h2>树状结构</h2>
+    <p>我的文件的树形结构如下所示：</p>
+    <ul id="racines">
+        <li>/
+            <ul class="fichiers">
+                <li>index.php <i>(... 主页 ...)</i></li>
+            </ul>
+        </li>
+        <li>jeu/ (... 网站的一部分，只有成员才能访问 ...)
+            <ul>
+                <li>quizz.php (... 带有级别的游戏启动页面 ...)</li>
+                <li>quest.php (... 有问题的页面 ...)</li>
+                <li>gagne.php (... 玩家获胜时的页面 ...)</li>
+                <li>score.php (... 得分最高的页面 ...)</li>
+            </ul>
+        </li>
+        <li>php/
+            <ul>
+                <li>bd.inc.php (... 数据库配置 ...)</li>
+                <li>connexion.inc.php (... 数据库连接文件 ...)</li>
+                <li>mire.inc.php (... 登录模式 ...)</li>
+                <li>authorise.inc.php (... 用户已登录 ...)</li>
+            </ul>
+        </li>
+        <li>css/
+            <ul>
+                <li>quizz.css (... CSS文件 ...)</li>
+            </ul>
+        </li>
+        <li>img/ ( ... 包含所有图像 ...)
+            <ul>
+                <li>tux.png</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="bdd" class="project">
+    <h2>数据库</h2>
+    <p>测验数据库必须满足几个需求：</p>
+    <ul>
+        <li>验证用户</li>
+        <li>托管问题列表</li>
+        <li>托管不同的答案，并注释正确的答案</li>
+        <li>计算一个或多个玩家的分数</li>
+    </ul>
+    <p>为了满足这些需求，数据库的结构如下：
+        <br> <i>（*表示主键）</i></p>
+    <table id="bdd-table">
+        <tr>
+            <th>播放器</th>
+            <th>问题</th>
+            <th>分数</th>
+        </tr>
+        <tr>
+            <td>登录 <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+            <td>用户名 <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+            <td>用户名 <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+        </tr>
+        <tr>
+            <td>密码 <code>[ VARCHAR 32 ]</code></td>
+            <td>陈述（问题） <code>[ VARCHAR 256 ]</code></td>
+            <td>过时的 <code>[ TIMESTAMP ]</code></td>
+        </tr>
+        <tr>
+            <td>电子邮件<code>[ VARCHAR 64 ]</code></td>
+            <td>答案1 <code>[ VARCHAR 32 ]</code></td>
+            <td>播放器 <code>[ VARCHAR 32 ] [ PRIMARY ]</code></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>答案2 <code>[ VARCHAR 32 ]</code></td>
+            <td>分数 <code>[ INT ]</code></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>答案3 <code>[ VARCHAR 32 ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>答案3 <code>[ VARCHAR 32 ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>正确答案号码 <code>[ INT ]</code></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>难度（1、2或3） <code>[ INT ]</code></td>
+            <td>-</td>
+        </tr>
+    </table>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">法律声明</a>
+        </p>
+    </div>
+</footer>
+</html>

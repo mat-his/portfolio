@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Le site</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204);
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../../index_ch.html" style="flex: 2;">
+            <p class="tab active" onclick="hideHamburger()">Lecomte</p>
+        </a>
+        <a href="../../index_ch.html#dev" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">发展</p>
+        </a>
+        <a href="../../index_ch.html#vfx" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">视觉特效</p>
+        </a>
+        <a href="../../index_ch.html#game-design" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">游戏设计</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab" onclick="hideHamburger()">接触</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/chine.png" alt="chinese">
+            <div class="dropdown-content">
+                <a href="../../html/fr/site.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../../html/en/site.html"><img src="../../images/angleterre.png" alt="english"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="project" id="intro">
+    <img src="../../images/web_design.png" alt="tux" id="image-site">
+    <h1>网站</h1>
+    <i>2021年2月15日</i>
+    <p>您正在浏览的当前站点不会继承任何模板（Google字体/图标除外）。 动画，样式表和
+        布局是“手工制作的”。
+        <br>该网站的目的是能够清楚地表明我是谁，我做什么以及我如何做。
+        事实。 挑战看似简单，但却很复杂。
+        <br>确实，关键不是列出我们是什么，而是思考如何
+        合成并增强它。
+    </p>
+    <p>因此，我决定将自己的技能分为三个部分：</p>
+    <ul>
+        <li>开发（对于朋友来说是“ dev”），</li>
+        <li> VFX（特殊效果，动作设计），</li>
+        <li>和游戏设计（3D模型的概念，在Unity上编程）。</li>
+    </ul>
+    <p>因此，在本文中，我们将了解如何设计此产品组合的人体工程学。</p>
+</section>
+
+<menu class="menu">
+    <h2>菜单</h2>
+    <ul>
+        <a href="#intro">
+            <li>介绍</li>
+        </a>
+        <a href="#hebergement">
+            <li>样式表</li>
+        </a>
+        <a href="#arborescence">
+            <li>导航</li>
+        </a>
+        <a href="#bdd">
+            <li>住宿</li>
+        </a>
+    </ul>
+</menu>
+
+<section class="project parts">
+    <h2>样式表</h2>
+    <p>让我们从样式表开始，这是任何网页上最可见的元素。 每张
+        风格，我会听到颜色，小部件的形状，动画和过渡效果，而不会忘记
+        版式。</p>
+    <h3>颜色</h3>
+    <p>首先，我决定设置深色背景，因为这是我选择工作的环境，
+        进行编码，思考。
+        然后，强调色必须与背景色充分脱颖而出，而又不能
+        突击。 此外，她必须与我保持联系，而不能复制我的一些重要项目
+        带有自己的颜色代码。
+        最后，颜色必须相对于网站所涉及的主题（作品集）保持相对中性。</p>
+    <div class="style"><code><span style="color: var(--main-text)">--accent:</span> rgb(0, 102, 204)<span style="color: orange">;</span></code></div>
+
+    <h3>版式</h3>
+    <p>字体必须与本产品组合中涵盖的三个领域相对应，而不能忽略一个或另一个。
+        固定宽度的版式将通过放宽VFX来扩大编程领域，而
+        使用衬线字体的字体可能会丢失游戏设计和编程。</p>
+    <div class="style"><code><span style="color: orange">font-family: </span><span
+            style="color: green">'Audiowide'</span><span style="color: var(--main-text)">, cursive</span><span
+            style="color: orange">;</span>
+    </code></div>
+
+    <h3>动画/转</h3>
+    <p>动画和过渡用于创建基准并促进对应用程序或网站内导航的理解。
+        <br>这些动画更加有用，因为不同选项卡的内容都包含在主页中。
+    </p>
+</section>
+<section class="project parts">
+    <h2>导航</h2>
+    <p>该网站内的导航旨在简化。 通过简单的滚动，可以在所有部分之间导航，从而可以对项目进行仔细分类的概述。
+        <br>这种技术是沉浸式的。
+    </p>
+</section>
+
+<section class="project parts">
+    <h2>住宿</h2>
+    <p>该网站内的导航旨在简化。 通过简单的滚动，可以在所有部分之间导航，从而可以对项目进行仔细分类的概述。
+        <br>这种技术是沉浸式的。
+    </p>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">法律声明</a>
+        </p>
+    </div>
+</footer>
+</html>

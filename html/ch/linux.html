@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux配置</title>
+
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../../css/wide.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../css/small.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/medium.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <link rel="stylesheet" href="../../css/theme.scss"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <script src="../../js/index.js"></script>
+    <style>
+        :root {
+            --background: #121212;
+            --accent: rgb(0, 102, 204); /*#0066CC*/
+            --accent-shadow: rgba(0, 102, 204, 0.5);
+            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow-19: rgba(0, 0, 0, 0.19);
+            --main-text: #E1E1E1;
+            --title-font: 'Audiowide', cursive;
+            --main-font: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body onload="init()">
+<!--navbar-->
+<header>
+    <div class="navbar layout-hamburger">
+        <button class="">
+        <span id="hamburger" class="material-icons" onclick="menu()">
+          menu
+        </span>
+        </button>
+    </div>
+    <div class="navbar layout-tabs">
+        <a href="../../index_ch.html" style="flex: 2;">
+            <p class="tab active" onclick="hideHamburger()">Lecomte</p>
+        </a>
+        <a href="../../index_ch.html#dev" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">发展</p>
+        </a>
+        <a href="../../index_ch.html#vfx" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">视觉特效</p>
+        </a>
+        <a href="../../index_ch.html#game-design" style="flex: 1;">
+            <p class="tab" onclick="hideHamburger()">游戏设计</p>
+        </a>
+        <a href="#contact" style="flex: 2;">
+            <p class="tab" onclick="hideHamburger()">接触</p>
+        </a>
+        <div class="dropdown">
+            <img class="dropbtn" src="../../images/chine.png" alt="chinese">
+            <div class="dropdown-content">
+                <a href="../../html/fr/linux.html"><img src="../../images/france.png" alt="french" /></a>
+                <a href="../../html/en/linux.html"><img src="../../images/angleterre.png" alt="english"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<menu id="menu-hiding" class="menu" style="visibility: hidden;">
+    <h2>菜单</h2>
+    <ul>
+        <a href="#intro">
+            <li>介绍</li>
+        </a>
+        <a href="#win10-kvm">
+            <li>Windows 10 和 KVM</li>
+        </a>
+        <a href="#raid-ahci">
+            <li>RAID转换为AHCI</li>
+        </a>
+        <a href="#intel-graphics">
+            <li>集成显卡</li>
+        </a>
+        <a href="#conky">
+            <li>Conky</li>
+        </a>
+        <a href="#fingerprint-reader">
+            <li>指纹传感器</li>
+        </a>
+        <a href="#extensions-gnome">
+            <li>扩大 Gnome</li>
+        </a>
+        <a href="#android-studio">
+            <li>安装 Android Studio</li>
+        </a>
+        <a href="#dual-boot">
+            <li>Dual Boot</li>
+        </a>
+    </ul>
+</menu>
+
+<!--image intro-->
+<section id="intro">
+    <img src="../../images/unleash_your_robot.webp" alt="robot" id="image-linux">
+    <div class="over-image-intro project">
+
+        <h1 id="title-linux-config">我的Linux配置</h1>
+        <p> 我的操作系统的配置就像一个长期未完成的旅程。
+            <br>一些作品令人疑惑，其他人非常令人满意，
+            但它超出了我仍然制作的工作环境的持续改进
+            今天。
+            <br>我们将以高效的方式看到我为我的系统带来的不同改进
+            自收购机器以来。
+        </p>
+    </div>
+    <button id="button-linux" class="go" onclick="scrollToFields()">
+        继续
+    </button>
+    <p id="fields-adjust" style="color: transparent;">dnboILNFOMBIFNboIFN</p>
+</section>
+
+<section class="project soon">
+    <div>
+        <p class="date">很快</p>
+        <h2>触摸屏</h2>
+        <p> Pop!_OS（基于Ubuntu）已经兼容Dell设备驱动程序，例如小鼠游戏Alienware，
+            笔，触摸屏，......
+            <br>虽然互动没有问题，订单的设置和定制，
+            按钮和颜色是不可能的。
+            <br> </p>
+        <p>结果，如果按钮或手势的默认关联命令是不合适的或
+            纠缠，
+
+            <a title="KDE, GPLv3 &lt;http://www.gnu.org/licenses/gpl-3.0.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:Calligrakrita-base.svg">
+                <img width="20%" alt="Calligrakrita-base"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/512px-Calligrakrita-base.svg.png">
+            </a>
+            <a title="Tuomas Kuosmanen, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+               href="https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_gnome.svg">
+                <img width="20%"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/600px-The_GIMP_icon_-_gnome.svg.png">
+            </a>
+
+            不可能修改它们，它可能会在使用时构成很多问题
+            图形软件如krita或gimp。
+        </p>
+        <p>由于不同的工具，我会尝试解决问题，如<i> xdotools </i>或<i> tapegg </i>。
+        </p>
+    </div>
+</section>
+<section class="project" id="win10-kvm">
+    <div>
+        <p class="date">2月26日，2021年</p>
+        <h2>Windows 10 回来 !</h2>
+        <p>更改分区管理器（RAID => AHCI）后，我毫不奇怪地意识到Windows 10不会
+            不再展示，
+            计算机在启动时显示黑屏，然后在没有磁盘的情况下启动到另一个磁盘上
+            找到Windows 10工作。</p>
+        <p>如前所述，我对Windows 10的使用现在减少到更新
+            固件和我的设备签署了戴尔。
+            另一方面，在肘部下有Windows 10并快速入门，执行准时软件
+            例如，在Windows中，可以非常方便。
+            <br></p>
+
+        <h3>-工具</h3>
+        <a href="https://logonoid.com/kvm-logo/" target="_blank">
+            <img class="image-desc"
+                 src="https://logonoid.com/images/thumbs/kvm-logo.png"
+                 alt="KVM Logo"/>
+        </a>
+        <p>这是<a href="https://www.linux-kvm.org/page/Main_Page">KVM的赌注
+            (Kernel-based Virtual Machine) </a></p>
+        <br>
+
+        <p>KVM是一种集成到linux中的开放源代码虚拟化技术，它允许，
+            简单地说，从内核本身启动虚拟机。
+            这种技术的作用是使虚拟机非常强大，因为它们使用
+            与<a href="https://www.virtualbox.org/"> Oracle相比，系统资源要好得多
+                例如VirtualBox </a>。</p>
+        <br>
+        <p>我经常使用KVM来启动虚拟机，让我测试a <a href="quizz.html">
+            环境灯</a>，MySQL数据库服务器，甚至使用Kali Linux为其
+            笔测试工具。</p>
+        <p>所以我想尝试使用KVM的Windows 10，并在手上的<a href="#extensions-gnome">我的管理
+            CPU资源（GNOME扩展）</a></p>
+        <!--<img class="image-desc-left" src="../images/cpu_managment.png">-->
+        <p>令我惊讶的是，Windows 10流动旋转。 我显然促进了安装
+            轻型程序，但即使在缩放工作中播放视频。</p>
+        <br>
+        <p>当然，拥有一个适度的显卡（英特尔UHD图形），这种流动性会很快进入
+            银行面向使用美食游戏或4 k流媒体。 但这些表演结果
+            足以我的利用。</p>
+
+
+        <h3> - 功能和安装</h3>
+        <img class="image-desc-none" src="../../images/virtual-machine-manager-logo.png"
+             alt="https://ubuntuhandbook.org/index.php/2013/12/install-virt-manager-ppa-ubuntu-linux/">
+        <p>要创建KVM虚拟机，我使用<i> virt-manager </i> GUI工具，但一切都可以完成
+            在线命令感谢<i> virsh </i>和<i> qemu </i>。</p>
+
+        <p>在线订单，它会给：</p>
+        <div class="code">
+            <code># virt-install --name=win10 \<br>
+                --vcpus=4 \<br>
+                --memory=16024 \<br>
+                --cdrom=/tmp/windows10.iso \<br>
+                --disk size=100 \<br>
+                --os-variant=windows10</code>
+        </div>
+
+
+        <h3>-平滑</h3>
+        <p>这家公司的理想将能够通过按下我的按钮来启动Windows 10
+            码头（我最喜欢的酒吧）
+            这正是我所做的。</p>
+        <h4>步骤1 ：</h4>
+        <p>创建启动虚拟机的脚本，并启动桌面查看器。</p>
+        <code>start_windows10.sh</code>
+        <div class="code">
+            <code>#! /bin/bash<br>
+                <br>
+                virsh start win10<br>
+                virt-viewer -cf qemu:///system win10<br>
+            </code>
+        </div>
+        <p>然后授予必要的授权：</p>
+        <div class="code">
+            <code>chmod +x ./start_windows.sh</code>
+        </div>
+        <h4>第2步 ：</h4>
+        <p>在应用程序菜单中创建一个图标</p>
+        <img id="image-windows" class="image-desc-left" src="../../images/windows10.png" alt="">
+        <p>再一次，有不同的方法可以在应用程序菜单中创建和编辑图标。</p>
+        <p>我可以在<code>~/.local/share/applications </code>目录中创建一个.desktop文件。但是
+            我刚刚使用了软件<a href="https://doc.ubuntu-fr.org/alacarte"> alacarte </a>
+            在图形模式中轻松编辑。</p>
+
+    </div>
+</section>
+<section class="project" id="raid-ahci">
+    <div>
+        <p class="date">2月25日，2021年</p>
+        <h2>RAID磁盘转换为AHCI</h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+<section class="project" id="intel-graphics">
+    <div>
+        <p class="date">Décembre 2020</p>
+        <h2>集成显卡的问题</h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+<section class="project" id="conky">
+    <div>
+        <p class="date">2020年12月-</p>
+        <h2>Conky</h2>
+        <p class="soon-available">该商品即将上市</p>
+        <img class="image-desc-none" id="image-conky" src="../../images/conky_screenshot.png" alt="desktop screenshot to illustrate conky development">
+
+    </div>
+</section>
+<section class="project" id="fingerprint-reader">
+    <div>
+        <p class="date">2020年11月-</p>
+        <h2>指纹识别器</h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+<section class="project" id="extensions-gnome">
+    <div>
+        <p class="date">2020年10月-</p>
+        <h2>Gnome扩展名 </h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+<section class="project" id="android-studio">
+    <div>
+        <p class="date">2020年11月</p>
+        <h2>安装Android Studio</h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+<section class="project" id="dual-boot">
+    <div>
+        <p class="date">2020年1月12日-2020年9月30日</p>
+        <h2>Linux dual boot安装 </h2>
+        <p class="soon-available">该商品即将上市</p>
+    </div>
+</section>
+</body>
+<footer id="contact">
+    <article class="contact">
+        <a href="mailto:vm.lecomte@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                 alt="Gmail icon 2020" >
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank">
+            <img src="../../images/linkedin_original.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/m-lecomte" target="_blank">
+            <img src="../../images/github.png" alt="github logo inverted" style="filter: invert(1)">
+        </a>
+
+    </article>
+
+    <div class="legal">
+        <a href="mailto:vm.lecomte@gmail.com"><p>vm.lecomte@gmail.com</p></a>
+        <p class="separator"> | </p>
+        <p>Mathis Lecomte, GPL-3.0 License</p>
+        <p class="separator"> | </p>
+        <p>
+            <a href="https://www.legalplace.fr/guides/mentions-legales/">法律声明</a>
+        </p>
+    </div>
+</footer>
+</html>
