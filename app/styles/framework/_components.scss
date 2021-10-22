@@ -1,0 +1,175 @@
+
+/*region HEADER */
+#button-hamburger {
+  display: none;
+}
+
+#button-hamburger {
+  display: none;
+}
+
+#button-hamburger {
+  display: none;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+}
+header > .tab {
+  float: left;
+  display: block;
+}
+
+.layout-tabs {
+  display: flex;
+  justify-content: center;
+  float: right;
+}
+
+.tab {
+  padding: 1.25em;
+}
+
+.tab a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all .1s ease-in-out;
+}
+
+.tab a:hover {
+  color: $color-primary;
+}
+
+.menu-open {
+  display: flex !important;
+}
+
+@media screen and (max-width: 650px) {
+  #button-hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.25em;
+  }
+  #button-hamburger button {
+    background: transparent;
+    border: none;
+  }
+  .layout-tabs {
+    justify-content: center;
+    float: unset;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: $color-background;
+    display: none;
+  }
+}
+/*endregion */
+
+/*region INTRO */
+#intro {
+  h1 {
+    font-family: $font-signature;
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .button {
+    margin-top: 4rem;
+  }
+}
+
+/*endregion INTRO */
+
+/*region BIO RESUME */
+#bio-resume {
+  background-color: $color-on-surface;
+  text-align: left;
+  color: black;
+  max-width: none;
+  line-height: 0;
+  padding: 0;
+
+  #wave {
+    max-width: 100%;
+  }
+  div {
+    line-height: 1.15;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+
+  .bio-p {
+    margin-bottom: 3rem;
+  }
+
+  .bio-icon {
+    max-width: 400px;
+    float: right;
+    padding: 1rem;
+  }
+
+  .hexagon-gallery {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+.hexagon-before {
+  transform: rotateZ(180deg);
+  margin-top: -1px;
+}
+.hexagon-after {
+
+}
+
+@media screen and (max-width: 975px) {
+  #bio-resume .bio-icon {
+    float: unset;
+    padding: 1rem;
+    margin: auto;
+    display: block;
+    max-width: 350px;
+  }
+}
+
+/*endregion BIO RESUME */
+
+/*region FOOTER */
+footer {
+  background-color: $color-surface;
+}
+#contact a > img {
+  /*width: 120px;*/
+  max-width: 5rem;
+  width: 5rem;
+}
+#contact a:nth-child(3) > img {
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 650px) {
+  #contact {
+    flex-wrap: wrap;
+  }
+  .legal {
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 0;
+  }
+  .legal > * {
+    margin: 0 auto;
+    line-height: 1;
+    text-align: center;
+  }
+}
+/*endregion */

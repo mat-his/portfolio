@@ -1,0 +1,105 @@
+/* CARDS */
+
+/*region WIDGETS */
+.box-default {
+  background-color: $color-surface;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: $radius;
+  padding: 2rem;
+}
+/*endregion WIDGETS */
+
+/*region PROJECT ITEM */
+.p-desc {
+  @extend %flex-container;
+  width: 90%;
+  height: 90%;
+  background-color: $color-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5%;
+  opacity: 0;
+  transition: $card-transition;
+  text-align: center;
+}
+
+.p-desc span {
+  font-family: $font-headline;
+  font-size: 1.25em;
+}
+
+.p-title {
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+
+.p-desc span {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.card-thb-desc:hover {
+  transform: scale(1.05);
+}
+
+.card-thb-desc:hover .p-desc {
+  opacity: 0.85;
+}
+
+.p-title {
+  text-align: center;
+}
+
+.project-card {
+  position: relative;
+  @include min-size(280px);
+  width: $card-width;
+  height: $card-width;
+  transition: all .3s ease-in-out;
+  //transform: scale(1.0);
+  margin-top: 0;
+  opacity: 1;
+}
+
+.card-thb-desc {
+  transition: all .2s ease-in-out;
+  transform: scale(1.0);
+}
+
+.project-card > .box-default {
+  position: relative;
+  width: 100%;
+  /* 1:1 Aspect Ratio */
+  padding: 100% 0 0;
+  display: block;
+}
+
+.project-card .p-thumbnail {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  white-space: nowrap;
+  display: inline-flex;
+}
+
+.project-card .p-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.project-card img {
+  max-width: 100%;
+  margin: auto;
+  max-height: 100%;
+}
+
+.smooth-entrance {
+  margin-top: 200px;
+  opacity: 0;
+}
+
+/*endregion PROJECT ITEM */

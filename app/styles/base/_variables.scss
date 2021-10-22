@@ -1,0 +1,27 @@
+/* VARIABLES */
+
+$color-background: #121212;
+$color-surface: #212121;
+$color-on-surface: #ededed;
+$color-primary: #8B0C03;
+$color-text: #E1E1E1;
+$color-text-secondary: #212121;
+
+$font-headline: 'Orbitron', serif;
+$font-text: 'Roboto', sans-serif;
+$font-signature: 'Kaushan Script', cursive;
+
+$radius: 0.5rem;
+$card-transition: all 0.2s ease-in-out;
+$card-width: 16rem;
+
+$link: #ffa600;
+$listStyle: none;
+
+@function bounding-width ($width) {
+  @return $width + 1.5rem;
+}
+
+@function negative-width ($width) {
+  @return $width * -1;
+}

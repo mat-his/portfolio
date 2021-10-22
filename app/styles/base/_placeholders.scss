@@ -1,0 +1,12 @@
+%flex-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+%hamburger-absolute {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

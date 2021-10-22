@@ -1,0 +1,11 @@
+<article class="project-card card-thb-desc smooth-entrance">
+  <a class="box-default" href={{if @project.link @project.link "#"}} target={{if @project.link '_blank' '_self'}}>
+    <div class='p-thumbnail'>
+      {{!--<span class="p-helper"></span>--}}
+      <img src="{{@project.thumbnail}}" alt="" role="none">
+    </div>
+    <div class="p-desc"><span>{{@project.description}}</span></div>
+  </a>
+  <h4 class='p-title'>{{@project.title}}</h4>
+
+</article>
