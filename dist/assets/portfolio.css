@@ -201,10 +201,6 @@ header > .tab {
   margin-top: -1px;
 }
 
-.hexagon-after {
-  margin-bottom: -1px;
-}
-
 @media screen and (max-width: 975px) {
   #bio-resume .bio-icon {
     float: unset;

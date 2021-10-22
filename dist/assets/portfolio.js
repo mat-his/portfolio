@@ -2580,7 +2580,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("portfolio/app")["default"].create({"name":"portfolio","version":"0.0.0+b46b028b"});
+            require("portfolio/app")["default"].create({"name":"portfolio","version":"0.0.0+b048cda7"});
           }
         
 //# sourceMappingURL=portfolio.map
