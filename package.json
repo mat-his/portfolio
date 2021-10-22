@@ -77,5 +77,10 @@
   },
   "dependencies": {
     "@ember-data/serializer": "^3.28.3"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://m-lecomte.github.io/portfolio"
   }
+
 }
