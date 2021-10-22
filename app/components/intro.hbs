@@ -1,0 +1,18 @@
+{{!--image intro--}}
+<section id="intro" {{intro-home}}>
+  {{#if this.imageFullscreen}}
+  <img id="image-home" class="image-intro wide" src="{{@intro.image}}" alt="robot">
+  <button class="go font-effect-anaglyph" onclick="scrollToFields()" type="button">Start</button>
+  {{else}}
+  {{!--<img id="image-home" class="image-intro half" src="{{@intro.image}}" alt="robot">--}}
+    <img id="image-home" class="image-intro half" src="{{@intro.image}}" alt="Mathis Lecomte Home worker">
+  <div class="text-intro">
+    <h1>{{@intro.title}}</h1>
+    {{#if @intro.subtitle}}<h2>{{@intro.subtitle}}</h2>{{/if}}
+    <p>{{@intro.description}}</p>
+    <div class="button">
+      <button class="go font-effect-anaglyph" onclick="scrollToFields()" type="button">Commencer</button>
+    </div>
+  </div>
+  {{/if}}
+</section>

@@ -1,0 +1,8 @@
+<section id="list-{{@title}}" class="project-list list-{{@title}}" {{in-viewport onEnter=this.onEnter}}>
+  <h2>{{@title}}</h2>
+  <div class="p-wrapper">
+    {{#each @projects as |pjt|}}
+      <ProjectWrapper::Item @project={{pjt}} />
+    {{/each}}
+  </div>
+</section>

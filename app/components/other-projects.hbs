@@ -1,0 +1,8 @@
+<section id="other">
+  <h2>{{@title}}</h2>
+  <div class="o-grid">
+    {{#each @other as |otr| }}
+      <OtherProject::Item @other={{otr}} />
+    {{/each}}
+  </div>
+</section>

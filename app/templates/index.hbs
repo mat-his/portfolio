@@ -1,0 +1,11 @@
+<Intro @intro={{@model.intro}} imageFullscreen={{false}} />
+{{!-- récupérer les infos du model bio (avec l'url ?) --}}
+<RadarChart @projects={{@model.chart}} />
+
+<BioResume @resume="{{@model.bio.data.resume}}" @thumbnail="{{@model.bio.data.thumbnail}}"></BioResume>
+<div id="projects"></div>
+<ProjectWrapper @title="Android" @projects={{@model.android}}></ProjectWrapper>
+<ProjectWrapper @title="Front-end" @projects={{@model.frontEnd}}></ProjectWrapper>
+<ProjectWrapper @title="Back-end" @projects={{@model.backEnd}}></ProjectWrapper>
+<ProjectWrapper @title="Software" @projects={{@model.software}}></ProjectWrapper>
+<OtherProjects @title="Ailleurs sur le web..." @other={{@model.other}}></OtherProjects>

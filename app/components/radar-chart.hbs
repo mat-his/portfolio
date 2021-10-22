@@ -1,0 +1,14 @@
+<section id="skills">
+  <canvas id="radar-chart" class="sk-canvas" width="900" height="600" {{chart-canvas @projects}}>
+    {{yield}}
+  </canvas>
+  <ul class="sk-projects">
+    {{#each @projects as |pjt index|}}
+      <li class="p-{{index}}" {{on "click" this.selectProject}} {{did-insert this.increment}}>
+        <div class="sk-color" style="background-color: {{pjt.color}}"></div>
+        <span>{{pjt.title}}</span></li>
+    {{/each}}
+  </ul>
+
+</section>
+

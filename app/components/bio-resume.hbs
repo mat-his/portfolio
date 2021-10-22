@@ -1,0 +1,50 @@
+<section id="bio-resume">
+  {{!--<img class="hexagon-bg hexagon-before" src="/assets/images/hexagon_gallery_design.svg" />--}}
+  <HexagonGallery @position="before" />
+  <div class="wrapper-l">
+    <p style="font-style: italic;">Le 21 Octobre 2021</p>
+    <img class="bio-icon" src="{{@thumbnail}}" alt="icon profile">
+    <h2 style="color: black">Bio</h2>
+    <article class="bio-p wrapper-l">
+
+      {{{@resume}}}
+      {{yield}}
+    </article>
+  </div>
+
+  {{!--<img class="hexagon-bg hexagon-after" src="/assets/images/hexagon_gallery_design.svg" />--}}
+
+  <HexagonGallery @position="after" />
+
+
+
+
+
+  <!--<svg
+    id="wave"
+    width="1920"
+    height="361.43936"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg">
+    <g
+      id="g-wave"
+      transform="matrix(3.7795276,0,0,3.7795276,0,-718.56065)">
+      <rect
+        style="fill:#121212;fill-opacity:1;stroke:none;stroke-width:0.132292;stroke-linejoin:round;paint-order:stroke fill markers"
+        id="outside"
+        width="508"
+        height="95.630829"
+        x="-508"
+        y="190.11917"
+        rx="0"
+        transform="scale(-1,1)"
+        ry="0" />
+      <path
+        style="fill:#e1e1e1;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+        d="m 508,215.49632 c -132.96132,73.46742 -292.79218,2.4184 -370.13166,2.39164 C 80.56803,217.52879 0,250.57863 0,250.57863 L 7.8563293e-4,190.11923 508,190.11917 Z"
+        id="inside" />
+    </g>
+  </svg>-->
+
+
+</section>

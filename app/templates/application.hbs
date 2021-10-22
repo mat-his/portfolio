@@ -1,0 +1,51 @@
+{{page-title "ML - Portfolio"}}
+<header {{menu}}>
+  <div id="button-hamburger" class="">
+    <button class="" type="button">
+      =
+    </button>
+  </div>
+  <Tab @link="/" id="tab-home">HOME</Tab>
+  <div class="layout-tabs">
+
+    <Tab @link="#projects">Projets</Tab>
+    <Tab @link="#bio-resume">Bio</Tab>
+    <Tab @link="#contact">Contact</Tab>
+    <Tab @link="https://github.com/m-lecomte/">Github</Tab>
+  </div>
+</header>
+
+<div class="content child-wrapper-l">
+{{outlet}}
+</div>
+
+<footer>
+  <div class="wrapper-l">
+    <h2>Contact</h2>
+
+    <div id="contact">
+      <a href="mailto:vm.lecomte@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+             alt="Gmail icon 2020" >
+      </a>
+      <a href="https://www.linkedin.com/in/mathis-lecomte-0892bb208/" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/linkedin_original.png" alt="linkedin logo">
+      </a>
+      <a href="https://github.com/m-lecomte" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/github.png" alt="github logo inverted">
+      </a>
+      <a href="https://stackoverflow.com/users/13236316/matt" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/stack-overflow-logo.png" alt="stack overflow logo">
+      </a>
+    </div>
+
+    <div class="legal">
+      <a href="mailto:vm.lecomte@gmail.com">vm.lecomte@gmail.com</a>
+      <p class="separator"> | </p>
+      <p>Mathis Lecomte, GPL-3.0 License</p>{{!-- link to licence --}}
+      <p class="separator"> | </p>
+      <LinkTo @route="legal-notice">Politique de confidentialité</LinkTo>
+    </div>
+  </div>
+
+</footer>
