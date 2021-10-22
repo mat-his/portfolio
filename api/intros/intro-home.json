@@ -1,0 +1,12 @@
+{
+  "data": {
+    "type": "intro",
+    "id": "intro-home",
+    "attributes": {
+      "title": "Mathis Lecomte",
+      "subtitle": "Dev. Full stack",
+      "description": "Android, Php, Ember.js... découvrez mon stack et mes projets.",
+      "image": "https://cdn.dribbble.com/users/9543282/screenshots/16693280/media/298be8ecb130219cc9a14f29dd95da47.gif"
+    }
+  }
+}

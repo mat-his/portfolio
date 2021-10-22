@@ -1,0 +1,9 @@
+{
+  "data": {
+    "type": "bio",
+    "id": "bio",
+    "name": "Mathis Lecomte",
+    "resume": "<p>Mon nom est Mathis LECOMTE. Né à Paris, j'ai grandi dans une petite banlieue de la petite couronne.\nJe suis actuellement à l'université, en Bachelor 3 Développement d'Applications, et recherche un poste dans mes différents domaines de compétences.  </p><p>Cela comprend essentiellement du développement mobile (Android, Kotlin, Flutter) et web (JS, Node.js, PHP, Wordpress), de la gestion de bases de données (MySQL, NoSQL, GCP) et scripting Python, ainsi qu'une appétence pour l'UX/UI Design. </p>\n\n            <p>Ma philosophie s'apparente à la mise à profit de chaque nouvelle notion au sein de mes différents\n                projets, afin d'améliorer les fonctionnalités existantes et de trouver de nouvelles pistes de recherche.\n                Curieux et polyvalent, j'apprends très vite à partir de ce que j'observe, et je prends plaisir à créer,\n                avec à l'appui mes Hobbies.\n            </p>\n\n            <p>Durant mon temps libre, je me passionne pour la robotique, le Street Art, la musique, et la littérature.\n                Je compose des morceaux de Jazz, de Neo-Soul, travaille à la construction d'un robot <i>Jerry</i> et\n                apporte régulièrement des améliorations à mes logiciels bureaux et mobiles en développement.</p>\n            <p>En somme, mes domaines d'activités sont multiples car je suis curieux d'apprendre, et cherche à\n                comprendre ce que j'observe. </p>",
+    "thumbnail": "../assets/images/profil.svg"
+  }
+}
