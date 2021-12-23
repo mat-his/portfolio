@@ -1,5 +1,5 @@
 import { modifier } from '@ember/render-modifiers';
-import { action, set } from '@ember/object';
+//import { action, set } from '@ember/object';
 
 export default modifier((element /*, params, hash*/) => {
   function elementInViewport(el) {
