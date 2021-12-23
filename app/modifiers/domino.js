@@ -22,6 +22,6 @@ export default modifier((element /*, params, hash*/) => {
     );
   }
   if (elementInViewport(element)) {
-    console.log('hello !');
+    //console.log('hello !');
   }
 });

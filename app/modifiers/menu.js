@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
 
 export default modifier(function menu(header /*, params, hash*/) {
-  console.log('hello from header !');
+  //console.log('hello from header !');
   let tabs = header.querySelector('.layout-tabs');
   let hbg = header.querySelector('#button-hamburger button');
   let isOpen = false;
@@ -11,7 +11,7 @@ export default modifier(function menu(header /*, params, hash*/) {
     isOpen = !isOpen;
     if (isOpen) {
       hbg.innerHTML = '0';
-      console.log('open !');
+      //console.log('open !');
     } else {
       hbg.innerHTML = '=';
     }

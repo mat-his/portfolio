@@ -53,13 +53,13 @@ export default modifier((canvas, [projects]) => /*, params, hash*/ {
 
   let hex = [];
   const hex_color = '#ABABAB';
-  console.log('init');
+  //console.log('init');
   init();
-  console.log('angles name');
+  //console.log('angles name');
   // Back
   angleName('back', 'AWS - PHP - \nWordpress - MySQL', 'left', 'middle');
   angleName('front', 'HTML - CSS \n- JS - SCSS - jQuery', 'left', 'middle');
-  angleName('js', 'Ember.js', 'left', 'top');
+  angleName('js', 'Next.js', 'Ember.js', 'React.js', 'left', 'top');
   angleName('flutter', 'Flutter', 'right', 'top');
   angleName('android', 'Java - Kotlin \n- Firebase', 'right', 'middle');
   angleName('linux', 'Linux - Shell - IOT', 'right', 'middle');
@@ -68,12 +68,12 @@ export default modifier((canvas, [projects]) => /*, params, hash*/ {
   angleName('design', 'Design Vector - UI/UX Design', 'left', 'bottom');
   angleName('animation', 'Motion Design - Illustration', 'left', 'middle');
 
-  console.log('draw');
+  //console.log('draw');
   projects.forEach((pjt) => {
     projectValuating(pjt);
   });
 
-  console.log('end');
+  //console.log('end');
 
   function init() {
     for (let j = 0; j < nLevels + 1; j++) {
@@ -130,7 +130,7 @@ export default modifier((canvas, [projects]) => /*, params, hash*/ {
       } else {
         ctx.lineTo(hx[key][0], hx[key][1]);
       }
-      console.log(hx[key], i);
+      //console.log(hx[key], i);
       i++;
     }
     ctx.stroke();
@@ -141,7 +141,7 @@ export default modifier((canvas, [projects]) => /*, params, hash*/ {
   }
 
   function projectValuating(pjt) {
-    console.log('color', pjt.color);
+    //console.log('color', pjt.color);
     ctx.beginPath();
     ctx.strokeStyle = pjt.color;
     ctx.fillStyle = pjt.color + '55';
@@ -161,7 +161,7 @@ export default modifier((canvas, [projects]) => /*, params, hash*/ {
           ctx.lineTo(hex[v][key][0], hex[v][key][1]);
         }
       }
-      console.log(pjt[key], i);
+      //console.log(pjt[key], i);
       i++;
     }
 

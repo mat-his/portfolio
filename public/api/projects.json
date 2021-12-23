@@ -167,17 +167,17 @@
     },
     {
       "type": "project",
-      "id": "android-rpi",
+      "id": "dopy-app",
       "attributes": {
-        "title": "Android - RPI",
+        "title": "Dopy App",
         "category": ["android"],
-        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/26/Raspberry_Pi_B%2B_illustration.svg",
+        "thumbnail": "https://www.dopy.tech/_next/image?url=%2Ficons%2Fdopy_logo.svg&w=256&q=75",
         "description": "Android App pour le développement et pilotage de micro-controlleurs",
-        "color": "#EBCD40",
+        "color": "#E6B705",
         "skills": {
-          "back": 2,
-          "front": 5,
-          "js": 5,
+          "back": 3,
+          "front": 0,
+          "js": 0,
           "flutter": 5,
           "android": 5,
           "linux": 5,
@@ -185,6 +185,29 @@
           "unity": 0,
           "design": 5,
           "animation": 5
+        }
+      }
+    },
+    {
+      "type": "project",
+      "id": "dopy-web",
+      "attributes": {
+        "title": "Dopy Website",
+        "category": ["back-end", "front-end"],
+        "thumbnail": "https://www.dopy.tech/_next/image?url=%2Ficons%2Fdopy_logo.svg&w=256&q=75",
+        "description": "Présentation de l'application Dopy",
+        "color": "#E6B705",
+        "skills": {
+          "back": 5,
+          "front": 5,
+          "js": 5,
+          "flutter": 0,
+          "android": 0,
+          "linux": 0,
+          "python": 0,
+          "unity": 0,
+          "design": 4,
+          "animation": 3
         }
       }
     },
