@@ -67,7 +67,9 @@
     "prettier": "^2.3.2",
     "qunit": "^2.16.0",
     "qunit-dom": "^1.6.0",
-    "sass": "^1.43.2"
+    "sass": "^1.43.2",
+    "surge": "latest",
+    "git-scripts": "0.2.1"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
@@ -81,6 +83,10 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "https://m-lecomte.github.io/portfolio"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./ --domain mathis-lecomte.surge.sh"
+    }
   }
-
 }
