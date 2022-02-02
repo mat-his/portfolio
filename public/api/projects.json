@@ -173,6 +173,7 @@
         "category": ["android"],
         "thumbnail": "https://www.dopy.tech/_next/image?url=%2Ficons%2Fdopy_logo.svg&w=256&q=75",
         "description": "Android App pour le développement et pilotage de micro-controlleurs",
+        "link": "https://play.google.com/store/apps/details?id=com.wdm.dopy",
         "color": "#E6B705",
         "skills": {
           "back": 3,
@@ -196,6 +197,7 @@
         "category": ["back-end", "front-end"],
         "thumbnail": "https://www.dopy.tech/_next/image?url=%2Ficons%2Fdopy_logo.svg&w=256&q=75",
         "description": "Présentation de l'application Dopy",
+        "link": "https://dopy.tech",
         "color": "#E6B705",
         "skills": {
           "back": 5,

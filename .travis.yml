@@ -23,12 +23,3 @@ branches:
 
 script:
   - npm test
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  on:
-    branch: master
-  local-dir: dist
-  verbose: true
